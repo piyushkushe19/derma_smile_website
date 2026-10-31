@@ -292,6 +292,37 @@ nav.o{border-left:1px solid rgba(169,133,72,.5);box-shadow:-20px 0 60px rgba(9,9
 #contact ::placeholder{color:rgba(21,21,21,.6);opacity:1}
 #contact select option{color:var(--ch);background:var(--iv)}
 #contact #fm{color:var(--ch)}
+
+/* ===== Blogs section (from cursor.html, unchanged) + scoped compat for this page ===== */
+#blogs{--charcoal:#151515;--rich-black:#090909;--champagne:#C6A568;--antique:#A98548;--ivory:#F8F5EF;--beige:#E9E1D5;--white:#FFFFFF;--text-muted:rgba(248,245,239,0.68);--font-serif:"Cormorant Garamond",Georgia,"Times New Roman",serif;--font-sans:"Manrope",system-ui,sans-serif;--ease:cubic-bezier(0.22,1,0.36,1);--container:min(1240px,calc(100% - 3rem));--section-y:clamp(4.5rem,10vw,8.5rem);padding:var(--section-y) 0;line-height:1.65;scroll-margin-top:calc(var(--st,34px) + 70px)}
+#blogs .container{width:var(--container);margin-inline:auto}
+.section-black{background:var(--rich-black);color:var(--ivory)}
+#blogs .section-label{font-size:0.72rem;letter-spacing:0.28em;text-transform:uppercase;color:var(--champagne);font-weight:600;margin-bottom:1rem}
+#blogs .section-title{font-family:var(--font-serif);font-weight:500;font-size:clamp(2.4rem,5vw,4rem);line-height:1.08;letter-spacing:-0.01em;margin:0 0 1rem}
+#blogs .section-title em{font-style:italic;color:var(--champagne)}
+#blogs .section-lead{max-width:38rem;color:var(--text-muted);font-size:1.05rem;font-weight:300}
+#blogs .reveal{opacity:0;transform:translateY(28px);transition:opacity .9s var(--ease),transform .9s var(--ease)}
+#blogs .reveal.is-in{opacity:1;transform:none}
+#blogs .reveal-delay-1{transition-delay:.1s}#blogs .reveal-delay-2{transition-delay:.2s}
+#blogs video{display:block}
+/* Blogs */
+.blog-grid {
+  display: grid; grid-template-columns: repeat(4, 1fr); gap: 1rem; margin-top: 2.2rem;
+}
+.blog-card {
+  position: relative; overflow: hidden; background: #111; border: 1px solid rgba(198,165,104,0.18);
+  aspect-ratio: 9/16;
+}
+.blog-card video, .blog-card img { width: 100%; height: 100%; object-fit: cover; }
+.blog-card figcaption {
+  position: absolute; left: 0; right: 0; bottom: 0; padding: 1rem;
+  background: linear-gradient(transparent, rgba(9,9,9,0.88));
+  font-size: 0.78rem; color: var(--beige); line-height: 1.4;
+}
+@media (max-width: 1080px){.blog-grid { grid-template-columns: 1fr 1fr; }}
+@media (max-width: 720px){.blog-grid { grid-template-columns: 1fr; }}
+.blog-card video { background: #1a1a1a; }
+@media(prefers-reduced-motion:reduce){#blogs .reveal{opacity:1;transform:none}}
 </style>
 </head>
 <body>
@@ -304,7 +335,7 @@ nav.o{border-left:1px solid rgba(169,133,72,.5);box-shadow:-20px 0 60px rgba(9,9
 <li><a class="nv" href="#top">Home</a></li><li><a class="nv" href="#intro">About Us</a></li>
 <li class="dd"><a class="nv" href="#treatments">Treatments</a><ul>
 <li><a href="#t1">SMOOTH — Laser Hair Reduction</a></li><li><a href="#t2">CLEAR — Advanced Skin Treatments</a></li><li><a href="#t3">GLOW — Rejuvenation</a></li><li><a href="#t4">GROW — Hair &amp; Scalp</a></li><li><a href="#t5">SCULPT — Body Contouring</a></li></ul></li>
-<li><a class="nv" href="#results">Before &amp; After</a></li><li><a class="nv" href="https://dermasmileaesthetics.com/">Blogs</a></li><li><a class="nv" href="#contact">Contact Us</a></li><li class="mcta"><a class="btn fill" href="#contact">Book Free Consultation</a></li></ul></nav>
+<li><a class="nv" href="#results">Before &amp; After</a></li><li><a class="nv" href="#blogs">Blogs</a></li><li><a class="nv" href="#contact">Contact Us</a></li><li class="mcta"><a class="btn fill" href="#contact">Book Free Consultation</a></li></ul></nav>
 <div class="hc"><a class="btn fill" href="#contact">Book Free Consultation</a><button id="bg" aria-label="Menu" aria-expanded="false"><span></span><span></span></button></div>
 </header>
 <main id="top">
@@ -329,6 +360,32 @@ nav.o{border-left:1px solid rgba(169,133,72,.5);box-shadow:-20px 0 60px rgba(9,9
 <section id="results"><p class="lbl">Results</p><h2>Natural Results That <em>Speak for Themselves</em></h2><p>Subtle. Real. Confident. Discover what’s possible with personalised care.</p><div class="gal" id="gal"></div></section>
 <section id="voices" class="dark"><p class="lbl">REAL PEOPLE. VISIBLE RESULTS.</p><h2>What Our <em>Patients</em> Say</h2>
 <div class="tm" id="tm"><div class="tt" id="tt"></div></div><div class="dots" id="dots"></div></section>
+    <section class="section section-black" id="blogs">
+      <div class="container">
+        <p class="section-label reveal">From the Clinic</p>
+        <h2 class="section-title reveal reveal-delay-1">Blogs &amp; Insights</h2>
+        <p class="section-lead reveal reveal-delay-2">Practical guidance from Derma Smile’s published clinic content.</p>
+        <div class="blog-grid">
+          
+          <figure class="blog-card reveal">
+            <video src="https://dermasmileaesthetics.com/wp-content/uploads/2026/09/How-to-find-your-scalp-the-right-wayUsing-random-shampoos-but-still-facing-hair-issues-%F0%9F%9A%BFThe-pro.mp4#t=0.1" muted playsinline loop preload="metadata" loading="lazy"></video>
+            <figcaption>How to find your scalp the right way</figcaption>
+          </figure>
+          <figure class="blog-card reveal">
+            <video src="https://dermasmileaesthetics.com/wp-content/uploads/2026/09/The-real-reason-your-shampoo-isnt-working%E2%80%A6Changing-shampoos-every-few-weeks-wont-fix-hair-fall.mp4#t=0.1" muted playsinline loop preload="metadata" loading="lazy"></video>
+            <figcaption>The real reason your shampoo isn't working</figcaption>
+          </figure>
+          <figure class="blog-card reveal">
+            <video src="https://dermasmileaesthetics.com/wp-content/uploads/2026/09/Why-Cheap-Cosmetic-Treatments-Can-Be-Dangerous.Caption-If-a-cosmetic-treatment-seems-too-cheap.mp4#t=0.1" muted playsinline loop preload="metadata" loading="lazy"></video>
+            <figcaption>Why cheap cosmetic treatments can be dangerous</figcaption>
+          </figure>
+          <figure class="blog-card reveal">
+            <video src="https://dermasmileaesthetics.com/wp-content/uploads/2026/09/Oily-skin-Stop-overcomplicating-it.Just-3-steps-in-the-morning.2%E2%80%933-steps-at-night.Thats-it.Cont_.mp4#t=0.1" muted playsinline loop preload="metadata" loading="lazy"></video>
+            <figcaption>Oily skin: stop overcomplicating it</figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
 <section id="faq"><p class="lbl">FAQ</p><h2>Frequently Asked <em>Questions</em></h2><div class="fq" id="fq"></div></section>
 <section id="contact">
 <div class="ring"></div>
@@ -337,7 +394,7 @@ nav.o{border-left:1px solid rgba(169,133,72,.5);box-shadow:-20px 0 60px rgba(9,9
 </main>
 <footer><div class="fg">
 <div><img class="fl" src="https://dermasmileaesthetics.com/wp-content/uploads/2026/09/Untitled-design-90.png" alt="Derma Smile" width="170" height="60" loading="lazy"><p style="font-size:14px">Skin · Hair · Laser · Slimming<br>Bangalore</p></div>
-<div><h5>Quick Links</h5><ul><li><a href="#top">Home</a></li><li><a href="#intro">About Us</a></li><li><a href="#results">Before &amp; After</a></li><li><a href="https://dermasmileaesthetics.com/">Blogs</a></li><li><a href="#contact">Contact Us</a></li></ul></div>
+<div><h5>Quick Links</h5><ul><li><a href="#top">Home</a></li><li><a href="#intro">About Us</a></li><li><a href="#results">Before &amp; After</a></li><li><a href="#blogs">Blogs</a></li><li><a href="#contact">Contact Us</a></li></ul></div>
 <div><h5>Treatments</h5><ul><li><a href="#t2">Skin Treatments</a></li><li><a href="#t4">Hair Treatments</a></li><li><a href="#t1">Laser Treatments</a></li><li><a href="#t5">Slimming Treatments</a></li></ul></div>
 <div><h5>Contact Information</h5><ul><li><a href="tel:+919944022114">+91-9944022114</a></li><li><a href="tel:+919900017623">+91-99000 17623</a></li><li><a href="https://wa.me/919944022114" target="_blank" rel="noopener">WhatsApp</a></li><li>Kodathi Gate, Sarjapur–Marathahalli Rd, Bengaluru 562125</li></ul></div></div>
 <div class="cp"><span>© 2026 Derma Smile Aesthetic Clinic. All rights reserved.</span></div></footer>
@@ -499,6 +556,24 @@ $$('a[href^="#t"]').forEach(a=>{const m=/^#t(\d)$/.exec(a.getAttribute('href'));
 $$('a[href^="#"]').forEach(a=>{const h=a.getAttribute('href');if(h.length<2||/^#t\d$/.test(h))return;const el=$(h);if(el)a.addEventListener('click',e=>{e.preventDefault();scrollTo({top:el.getBoundingClientRect().top+scrollY,behavior:'smooth'});history.pushState(null,'',h)})});
 addEventListener('load',()=>ScrollTrigger.refresh());document.fonts&&document.fonts.ready.then(()=>ScrollTrigger.refresh());
 })();
+</script>
+<script>
+(()=>{const reduceMotion=matchMedia("(prefers-reduced-motion: reduce)").matches;
+/* reveal for the Blogs section (same logic as the source file) */
+const revealEls=document.querySelectorAll("#blogs .reveal");
+if(reduceMotion){revealEls.forEach((el)=>el.classList.add("is-in"))}else{const io=new IntersectionObserver((entries)=>{entries.forEach((entry)=>{if(entry.isIntersecting){entry.target.classList.add("is-in");io.unobserve(entry.target)}})},{threshold:0.15,rootMargin:"0px 0px -8% 0px"});revealEls.forEach((el)=>io.observe(el))}
+})();
+    /* ---------- Blog video hover play ---------- */
+    document.querySelectorAll(".blog-card video").forEach((video) => {
+      const play = () => video.play().catch(() => {});
+      const pause = () => { video.pause(); };
+      video.parentElement.addEventListener("mouseenter", play);
+      video.parentElement.addEventListener("mouseleave", pause);
+      video.parentElement.addEventListener("touchstart", () => {
+        if (video.paused) play(); else pause();
+      }, { passive: true });
+    });
+
 </script>
 </body>
 </html>
