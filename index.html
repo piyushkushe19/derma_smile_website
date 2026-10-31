@@ -1,0 +1,504 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Derma Smile Aesthetic Clinic | Skin, Hair, Laser &amp; Slimming in Bangalore</title>
+<meta name="description" content="Advanced dermatology and aesthetic care in Bangalore: laser hair reduction, skin, hair and scalp treatments and body contouring. Book a free consultation.">
+<meta property="og:title" content="Derma Smile Aesthetic Clinic, Bangalore">
+<meta property="og:description" content="Healthy Skin. Confident You. Personalised skin, hair, laser and slimming care.">
+<meta property="og:type" content="website">
+<meta property="og:image" content="https://dermasmileaesthetics.com/wp-content/uploads/2026/10/97e44491-cfeb-4320-a828-a4cad0aee898-1024x819.png">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400;1,500&family=Manrope:wght@400;500;600&display=swap" rel="stylesheet">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"MedicalClinic","name":"Derma Smile Aesthetic Clinic","telephone":["+91-9944022114","+91-9900017623"],"address":{"@type":"PostalAddress","streetAddress":"Kodathi Gate, Sarjapur–Marathahalli Rd","addressLocality":"Bengaluru","postalCode":"562125","addressCountry":"IN"},"url":"https://dermasmileaesthetics.com/"}</script>
+<style>
+:root{--ch:#151515;--bk:#090909;--gold:#C6A568;--ant:#A98548;--iv:#F8F5EF;--bg:#E9E1D5;--wh:#fff;--serif:'Cormorant Garamond',Georgia,serif;--sans:'Manrope',system-ui,sans-serif;--pad:clamp(20px,5vw,80px);--ease:cubic-bezier(.2,.7,.2,1)}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font:400 16px/1.7 var(--sans);color:var(--ch);background:var(--iv);overflow-x:hidden}
+img{display:block;max-width:100%;width:100%;height:100%;object-fit:cover}
+a{color:inherit;text-decoration:none}
+ul{list-style:none}
+button{font:inherit;cursor:pointer;border:0;background:none;color:inherit}
+h1,h2,h3,h4{font-family:var(--serif);font-weight:400;line-height:1.05}
+em{font-style:italic;color:var(--gold)}
+.lbl{font-size:11px;letter-spacing:.28em;text-transform:uppercase;color:var(--ant);font-weight:600}
+.dark{background:var(--ch);color:var(--iv)}.dark .lbl{color:var(--gold)}
+section{padding:clamp(70px,10vw,140px) var(--pad);position:relative;overflow:hidden}
+h2{font-size:clamp(38px,5.4vw,78px);margin:14px 0 22px}
+.btn{display:inline-block;padding:16px 30px;font-size:11px;letter-spacing:.22em;text-transform:uppercase;font-weight:600;border:1px solid var(--gold);transition:.4s var(--ease);position:relative;overflow:hidden}
+.btn.fill{background:var(--gold);color:var(--bk)}.btn.fill:hover{background:var(--wh)}
+.btn.line:hover{background:var(--gold);color:var(--bk)}
+.dark .btn.line{color:var(--iv)}
+/* loader */
+#ld{position:fixed;inset:0;background:var(--bk);z-index:99;display:grid;place-items:center;transition:opacity .8s,visibility .8s}
+#ld img{width:min(220px,50vw);height:auto;margin:auto}
+#ld i{display:block;height:1px;width:min(220px,50vw);margin:26px auto 0;background:var(--gold);transform:scaleX(0);transform-origin:left;animation:bar 1.4s var(--ease) forwards}
+#ld.off{opacity:0;visibility:hidden}
+@keyframes bar{to{transform:scaleX(1)}}
+/* header */
+.strip{background:var(--bk);color:var(--bg);font-size:11px;letter-spacing:.14em;display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap;padding:8px var(--pad);position:relative;z-index:21}
+.strip a{color:var(--gold)}
+header{position:fixed;top:34px;left:0;right:0;z-index:20;display:flex;align-items:center;justify-content:space-between;padding:16px var(--pad);color:var(--iv);transition:.5s var(--ease)}
+header.s{top:0;background:rgba(9,9,9,.94);padding-block:10px}
+.logo{width:150px;height:auto}
+nav>ul{display:flex;gap:34px;align-items:center}
+nav a.nv{font-size:12px;letter-spacing:.14em;text-transform:uppercase;position:relative;padding:8px 0}
+nav a.nv:after{content:"";position:absolute;left:0;bottom:2px;height:1px;width:100%;background:var(--gold);transform:scaleX(0);transform-origin:right;transition:transform .5s var(--ease)}
+nav a.nv:hover:after{transform:scaleX(1);transform-origin:left}
+.dd{position:relative}
+.dd ul{position:absolute;top:100%;left:-20px;background:var(--bk);padding:14px 22px;min-width:270px;opacity:0;visibility:hidden;transform:translateY(10px);transition:.4s var(--ease);border-top:1px solid var(--gold)}
+.dd:hover ul,.dd:focus-within ul{opacity:1;visibility:visible;transform:none}
+.dd ul a{display:block;padding:7px 0;font-size:13px;color:var(--bg)}.dd ul a:hover{color:var(--gold)}
+.hc{display:flex;gap:18px;align-items:center}
+#bg{display:none;width:44px;height:44px;color:var(--iv);font-size:26px}
+@media(max-width:1020px){#bg{display:block}.hc .btn{display:none}
+nav{position:fixed;inset:0 0 0 auto;width:min(360px,86vw);background:var(--bk);transform:translateX(100%);transition:.5s var(--ease);padding:100px 34px;overflow:auto}
+nav.o{transform:none}nav>ul{flex-direction:column;align-items:flex-start;gap:14px}.dd ul{position:static;opacity:1;visibility:visible;transform:none;border:0;padding:0 0 0 12px}
+header{z-index:30}nav{z-index:-1}}
+/* hero */
+#hero{background:var(--bk);color:var(--iv);min-height:100vh;display:grid;grid-template-columns:1.05fr 1fr;align-items:center;gap:40px;padding-top:170px}
+#hero h1{font-size:clamp(52px,8vw,128px);margin:20px 0}
+#hero p{max-width:480px;color:var(--bg);opacity:.85}
+.cats{display:flex;gap:18px;flex-wrap:wrap;margin:26px 0 34px;font-size:11px;letter-spacing:.3em;color:var(--gold)}
+.cats span+span:before{content:"·";margin-right:18px}
+.ctas{display:flex;gap:14px;flex-wrap:wrap}
+.hv{position:relative;aspect-ratio:4/5;max-width:520px;justify-self:center;width:100%}
+.hv .ph{position:absolute;inset:6% 0 0 8%;overflow:hidden;border-radius:46% 46% 0 0/30% 30% 0 0;clip-path:inset(100% 0 0 0);animation:rv 1.6s .6s var(--ease) forwards}
+.ring{position:absolute;border-radius:50%;border:2px solid transparent;background:conic-gradient(from 0deg,var(--ant),#f0dcaa,var(--gold),var(--ant),#f0dcaa,var(--ant)) border-box;-webkit-mask:linear-gradient(#000 0 0) padding-box,linear-gradient(#000 0 0);-webkit-mask-composite:xor;mask-composite:exclude;mask:linear-gradient(#000 0 0) padding-box exclude,linear-gradient(#000 0 0)}
+.r1{inset:-6% -8% 10% -12%;animation:spin 24s linear infinite;transform:rotateX(65deg)}
+.r2{width:90px;height:90px;right:-4%;bottom:12%;animation:fl 6s ease-in-out infinite}
+.orb{position:absolute;width:70px;height:70px;border-radius:50%;left:-6%;top:12%;background:radial-gradient(circle at 30% 30%,rgba(255,255,255,.5),rgba(198,165,104,.25) 60%,transparent);border:1px solid rgba(198,165,104,.4);animation:fl 8s ease-in-out infinite reverse}
+@keyframes spin{to{transform:rotateX(65deg) rotateZ(360deg)}}
+@keyframes fl{50%{transform:translateY(-22px)}}
+@keyframes rv{to{clip-path:inset(0)}}
+.w{display:inline-block;overflow:hidden;vertical-align:top}.w b{display:inline-block;font-weight:inherit;transform:translateY(105%);animation:up 1s var(--ease) forwards}
+@keyframes up{to{transform:none}}
+.fu{opacity:0;transform:translateY(24px);animation:fi 1s var(--ease) forwards}
+@keyframes fi{to{opacity:1;transform:none}}
+.rev{opacity:0;transform:translateY(40px);transition:1s var(--ease)}.rev.in{opacity:1;transform:none}
+@media(max-width:900px){#hero{grid-template-columns:1fr;padding-top:150px}.r1{display:none}}
+/* intro */
+.intro{display:grid;grid-template-columns:1fr 1fr;gap:clamp(30px,6vw,100px);align-items:center}
+.intro .im{aspect-ratio:16/10;overflow:hidden;position:relative}
+.intro .im:before{content:"";position:absolute;inset:14px;border:1px solid var(--gold);z-index:1;pointer-events:none}
+.gl{height:1px;width:0;background:var(--gold);transition:width 1.6s var(--ease);margin:26px 0}.in .gl{width:120px}
+@media(max-width:800px){.intro{grid-template-columns:1fr}}
+/* treatments */
+.tr{display:grid;grid-template-columns:repeat(12,1fr);gap:20px;align-items:center;margin-top:clamp(60px,8vw,120px)}
+.tr .ims{grid-column:1/8;position:relative;aspect-ratio:var(--ar,5/4);perspective:900px}
+.tr:nth-child(even) .ims{grid-column:6/13;grid-row:1}.tr:nth-child(even) .tx{grid-column:1/6;grid-row:1}
+.tr .tx{grid-column:8/13}
+.ims .a,.ims .b{position:absolute;overflow:hidden;transition:transform .8s var(--ease)}
+.ims .a{inset:0 18% 0 0;border-radius:var(--m1,0)}
+.ims .b{inset:22% 0 -6% 52%;border:6px solid var(--iv);border-radius:var(--m2,0);box-shadow:0 20px 50px rgba(0,0,0,.18)}
+.dark .ims .b{border-color:var(--ch)}
+.ims img{transition:transform 1.2s var(--ease)}
+.ims:hover .a img{transform:scale(1.08)}.ims:hover .b{transform:translate(8px,-10px)}
+.ims:after{content:"";position:absolute;inset:-14px 24% 14px -14px;border:1px solid var(--gold);transition:.8s var(--ease);pointer-events:none}.ims:hover:after{inset:-4px 18% 4px -4px}
+.num{font-family:var(--serif);font-size:20px;color:var(--gold)}
+.tx h3{font-size:clamp(54px,7vw,104px);letter-spacing:.02em}
+.tx h4{font-size:clamp(20px,2vw,28px);font-style:italic;color:var(--ant);margin:6px 0 18px}
+.dark .tx h4{color:var(--gold)}
+.tx ul{margin:20px 0 28px;border-top:1px solid rgba(198,165,104,.5)}
+.tx li{padding:9px 0;border-bottom:1px solid rgba(198,165,104,.5);font-size:14px;letter-spacing:.04em}
+.ph1{--m1:50% 50% 0 0/35% 35% 0 0;--m2:50%}.ph2{--m1:0 40% 0 0;--m2:0}.ph3{--m1:50%;--m2:0 0 30px 0;--ar:1/1}.ph4{--m1:0;--m2:50% 0 0 0;--ar:4/5}.ph5{--m1:0 0 40% 0;--m2:0;--ar:6/5}
+@media(max-width:860px){.tr{display:block}.tr .tx{margin-top:36px}.ims{margin-right:10px}}
+/* concerns */
+.cx{display:grid;grid-template-columns:1fr 1fr 1fr;gap:clamp(24px,4vw,60px);margin-top:50px;align-items:start}
+.cx h4{font-size:12px;letter-spacing:.28em;text-transform:uppercase;font-family:var(--sans);color:var(--gold);margin-bottom:14px}
+.cx li button{display:block;width:100%;text-align:left;font:400 clamp(24px,2.6vw,36px)/1.2 var(--serif);padding:9px 0;border-bottom:1px solid rgba(248,245,239,.15);transition:.4s var(--ease);color:rgba(248,245,239,.65)}
+.cx li button:hover,.cx li button.on{color:var(--gold);padding-left:14px;border-color:var(--gold)}
+.cx .col+.col{margin-top:0}
+.pv{position:sticky;top:110px;aspect-ratio:4/5;overflow:hidden;border:1px solid var(--gold);background:var(--bk)}
+.pv img{position:absolute;inset:0;opacity:0;transition:opacity .8s,transform 1.4s var(--ease);transform:scale(1.08)}.pv img.on{opacity:1;transform:none}
+.pv .cap{position:absolute;left:0;right:0;bottom:0;padding:50px 20px 20px;background:linear-gradient(transparent,rgba(9,9,9,.9));display:flex;justify-content:space-between;align-items:center;gap:10px;z-index:2}
+.pv .cap span{font:italic 26px var(--serif)}.pv .cap a{font-size:10px;letter-spacing:.2em;color:var(--gold);border-bottom:1px solid var(--gold);white-space:nowrap}
+@media(max-width:960px){.cx{grid-template-columns:1fr 1fr}.pv{grid-column:1/-1;grid-row:1;position:relative;top:0;max-height:60vh;aspect-ratio:16/10}}
+@media(max-width:560px){.cx{grid-template-columns:1fr}}
+/* gallery */
+.gal{display:grid;grid-template-columns:repeat(12,1fr);gap:16px;margin-top:50px}
+.gal figure{position:relative;overflow:hidden;cursor:zoom-in;aspect-ratio:3/2;border:1px solid transparent;transition:border-color .5s}
+.gal figure:hover{border-color:var(--gold)}.gal figure:hover img{transform:scale(1.07)}
+.gal img{transition:transform 1.2s var(--ease)}
+.gal figure:nth-child(1){grid-column:1/8;aspect-ratio:4/3}.gal figure:nth-child(2){grid-column:8/13}.gal figure:nth-child(3){grid-column:1/6}.gal figure:nth-child(4){grid-column:6/13;aspect-ratio:4/3}
+.gal figcaption{position:absolute;left:0;bottom:0;padding:16px 20px;color:#fff;font:italic 26px var(--serif);background:linear-gradient(90deg,rgba(9,9,9,.7),transparent);width:100%}
+@media(max-width:700px){.gal figure{grid-column:1/-1!important;aspect-ratio:3/2!important}}
+#lb{position:fixed;inset:0;background:rgba(9,9,9,.96);z-index:60;display:none;place-items:center;padding:30px}
+#lb.o{display:grid}#lb img{max-width:92vw;max-height:84vh;width:auto;height:auto;object-fit:contain}
+#lb button{position:absolute;color:var(--gold);font-size:36px;width:56px;height:56px}
+#lb .x{top:14px;right:14px}#lb .p{left:10px}#lb .n{right:10px}#lb p{position:absolute;bottom:20px;color:var(--iv);font:italic 24px var(--serif)}
+/* testimonials */
+.tm{overflow:hidden;margin-top:50px;touch-action:pan-y}
+.tt{display:flex;transition:transform .9s var(--ease)}
+.tt blockquote{flex:0 0 100%;max-width:100%;padding:0 2px}
+.tt q{display:block;font:italic clamp(26px,3.6vw,52px)/1.2 var(--serif);max-width:980px;quotes:"“" "”"}
+.tt cite{display:block;margin-top:30px;font-style:normal;font-size:12px;letter-spacing:.22em;text-transform:uppercase;color:var(--gold)}
+.stars{color:var(--gold);letter-spacing:6px;margin-bottom:22px}
+.stars i{display:inline-block;font-style:normal;opacity:0;transform:scale(.3) rotate(-30deg);transition:.6s var(--ease)}
+.on .stars i{opacity:1;transform:none}.on .stars i:nth-child(2){transition-delay:.1s}.on .stars i:nth-child(3){transition-delay:.2s}.on .stars i:nth-child(4){transition-delay:.3s}.on .stars i:nth-child(5){transition-delay:.4s}
+.dots{display:flex;gap:10px;margin-top:40px}.dots button{width:40px;height:2px;background:rgba(248,245,239,.25)}.dots button.on{background:var(--gold)}
+/* faq */
+.fq{max-width:980px;margin-top:40px}
+.fq details{border-bottom:1px solid var(--gold)}.fq summary{list-style:none;cursor:pointer;display:flex;justify-content:space-between;gap:20px;align-items:center;padding:26px 0;font:400 clamp(21px,2.4vw,31px)/1.2 var(--serif)}
+.fq summary::-webkit-details-marker{display:none}
+.pm{position:relative;flex:0 0 22px;height:22px}.pm:before,.pm:after{content:"";position:absolute;background:var(--ant);left:0;top:10px;width:22px;height:1px;transition:.5s var(--ease)}.pm:after{transform:rotate(90deg)}
+.fq [open] .pm:after{transform:rotate(0)}
+.fq .ans{display:grid;grid-template-rows:0fr;transition:grid-template-rows .6s var(--ease)}.fq [open] .ans{grid-template-rows:1fr}
+.ans>div{overflow:hidden}.ans p{padding:0 0 28px;max-width:760px;color:#4a463f}
+/* cta */
+#cta{background:var(--bk);color:var(--iv)}
+.cg{display:grid;grid-template-columns:1fr 1fr;gap:clamp(30px,6vw,100px);align-items:center;position:relative;z-index:1}
+#cta .ring{width:520px;height:520px;right:-180px;top:-120px;opacity:.4;animation:spin 40s linear infinite;transform:rotateX(65deg)}
+form{display:grid;gap:18px}
+input,select,textarea{width:100%;background:transparent;border:0;border-bottom:1px solid rgba(198,165,104,.6);color:var(--iv);font:inherit;padding:14px 0;outline:0;transition:border-color .4s;border-radius:0}
+input:focus,select:focus,textarea:focus{border-color:var(--gold)}select option{color:#000}
+::placeholder{color:rgba(248,245,239,.55)}
+#fm{font-size:13px;color:var(--bg);min-height:20px}
+@media(max-width:800px){.cg{grid-template-columns:1fr}}
+/* footer */
+footer{background:var(--ch);color:var(--bg);padding:80px var(--pad) 30px;position:relative}
+footer:before{content:"";position:absolute;top:0;left:0;height:1px;width:100%;background:linear-gradient(90deg,transparent,var(--gold),transparent);background-size:200%;animation:sh 6s linear infinite}
+@keyframes sh{to{background-position:-200% 0}}
+.fg{display:grid;grid-template-columns:1.3fr 1fr 1fr 1.3fr;gap:40px}
+footer h5{font:600 11px var(--sans);letter-spacing:.26em;text-transform:uppercase;color:var(--gold);margin-bottom:18px}
+footer li{padding:4px 0;font-size:14px}footer a:hover{color:var(--gold)}
+.fl{width:170px;height:auto;margin-bottom:16px}
+.cp{margin-top:60px;padding-top:24px;border-top:1px solid rgba(198,165,104,.3);display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;font-size:12px}
+#up{position:fixed;right:20px;bottom:20px;width:48px;height:48px;border:1px solid var(--gold);background:var(--bk);color:var(--gold);z-index:15;opacity:0;pointer-events:none;transition:.4s}#up.s{opacity:1;pointer-events:auto}
+@media(max-width:860px){.fg{grid-template-columns:1fr 1fr}}@media(max-width:520px){.fg{grid-template-columns:1fr}}
+/* cursor */
+#cu{position:fixed;width:10px;height:10px;border-radius:50%;background:var(--gold);pointer-events:none;z-index:100;display:none;mix-blend-mode:normal;transition:width .3s,height .3s,margin .3s}
+#cu.h{width:46px;height:46px;margin:-18px 0 0 -18px;background:rgba(198,165,104,.25);border:1px solid var(--gold)}
+@media(hover:hover) and (pointer:fine){#cu{display:block}}
+@media(prefers-reduced-motion:reduce){*,*:before,*:after{animation-duration:.01ms!important;animation-delay:0s!important;transition-duration:.01ms!important}.w b,.fu,.rev{opacity:1;transform:none}.hv .ph{clip-path:none}html{scroll-behavior:auto}}
+/* ===== cinematic upgrade ===== */
+:focus-visible{outline:2px solid var(--gold);outline-offset:3px}
+#pg{position:fixed;top:0;left:0;right:0;height:2px;background:var(--gold);transform:scaleX(0);transform-origin:left;z-index:95;pointer-events:none}
+#ld{transition:transform 1s cubic-bezier(.77,0,.18,1),visibility 0s 1s}
+#ld.off{opacity:1;transform:translateY(-100%);visibility:hidden}
+#ld>div{width:min(300px,70vw);aspect-ratio:1;display:grid;place-content:center;position:relative}
+#ld u{position:absolute;inset:0;border-radius:50%;border:1px solid rgba(198,165,104,.25);border-top-color:var(--gold);animation:rot 2.4s linear infinite}
+@keyframes rot{to{transform:rotate(360deg)}}
+body:not(.ready) .w b,body:not(.ready) .fu,body:not(.ready) .hv .ph,body:not(.ready) .hv .ph img{animation-play-state:paused}
+body:not(.ready) header{opacity:0;transform:translateY(-16px)}
+header{padding:28px var(--pad)}.logo{width:176px;transition:width .6s var(--ease)}
+header.s{padding-block:8px;background:rgba(9,9,9,.97);border-bottom:1px solid rgba(198,165,104,.45);box-shadow:0 12px 40px rgba(0,0,0,.45)}
+header.s .logo{width:112px}header.s nav>ul{gap:24px}
+.hv{perspective:1100px}.hv .ph{z-index:1}.hv .ph img{transform:scale(1.35);animation:zs 2.4s .6s var(--ease) forwards}
+@keyframes zs{to{transform:none}}
+.hv canvas{position:absolute;left:-22%;top:-18%;width:144%;height:136%;z-index:0;pointer-events:none}
+.gl3 .r1,.gl3 .r2,.gl3 .orb{display:none}
+.sc{position:absolute;left:50%;bottom:24px;width:22px;height:40px;border:1px solid var(--gold);border-radius:12px;opacity:.8}
+.sc i{position:absolute;left:50%;top:7px;width:3px;height:8px;margin-left:-1.5px;border-radius:2px;background:var(--gold);animation:sd 1.8s ease-in-out infinite}
+@keyframes sd{60%{transform:translateY(14px);opacity:0}}
+@media(max-width:900px){.sc{display:none}}
+.btn:after{content:"";position:absolute;inset:3px;border:1px solid var(--gold);opacity:0;transform:scale(1.1);transition:.5s var(--ease);pointer-events:none}.btn:hover:after{opacity:.7;transform:none}
+.btn{will-change:transform}
+#bg span{display:block;width:26px;height:1.5px;background:currentColor;margin:6px auto;transition:.4s var(--ease)}
+#bg.o span:first-child{transform:translateY(7.5px) rotate(45deg)}#bg.o span:last-child{transform:translateY(-7.5px) rotate(-45deg)}
+body.lock{overflow:hidden}
+.sw{display:inline-block;overflow:hidden;vertical-align:top;padding:0 .04em .12em;margin:0 -.04em -.12em}.sw i{display:inline-block;font-style:inherit}
+/* pinned storytelling */
+#trs.hs{height:100vh;overflow:hidden;position:relative;margin:0}
+.hs .trk{display:flex;width:500%;height:100%}
+.hs .tr{flex:0 0 20%;width:20%;height:100vh;margin:0;padding:120px var(--pad) 70px;position:relative;z-index:1}
+.hs .ims{height:calc(100vh - 230px);aspect-ratio:auto}
+.hs .ph3{background:var(--iv);color:var(--ch)}.hs .ph3 .btn{color:var(--ch)}.hs .ph3 .ims .b{border-color:var(--iv)}.hs .ph3 h4{color:var(--ant)}
+.hs .ph4{background:var(--bk)}.hs .ph5 .ims .a{inset:0 6% 0 0}
+.hs .hr{position:absolute;left:50%;top:50%;width:70vmin;height:70vmin;margin:0;opacity:.25;pointer-events:none;z-index:0;transform:translate(-50%,-50%) rotateX(65deg)}
+.ind{position:absolute;left:var(--pad);right:var(--pad);bottom:28px;z-index:3;display:flex;align-items:center;gap:16px;font:500 20px var(--serif);color:var(--gold)}
+.ind span{flex:1;height:1px;background:rgba(198,165,104,.3);overflow:hidden}.ind i{display:block;height:100%;background:var(--gold);transform:scaleX(0);transform-origin:left}
+.ind b{font-weight:500}
+.gs .ims .b{transition:none}
+/* concerns mask */
+.pv img{clip-path:inset(0 0 0 100%);opacity:1;transform:scale(1.12);transition:clip-path 1s var(--ease),transform 1.6s var(--ease)}
+.pv img.pr{clip-path:inset(0);z-index:1;transform:none}.pv img.on{clip-path:inset(0);z-index:2;transform:none}
+.pv .cap{z-index:3}
+.cx li button{position:relative}.cx li button:before{content:"";position:absolute;left:0;bottom:-1px;height:1px;width:100%;background:var(--gold);transform:scaleX(0);transform-origin:left;transition:transform .6s var(--ease)}.cx li button.on:before{transform:scaleX(1)}
+/* carousel */
+.dots{align-items:center}.dots button:not(.ar){position:relative;overflow:hidden;transition:width .6s var(--ease)}.dots button.on:not(.ar){width:80px}
+.dots button.on:not(.ar):after{content:"";position:absolute;inset:0;background:var(--gold);transform-origin:left;animation:dp 6s linear}
+@keyframes dp{from{transform:scaleX(0)}}.tm:hover~.dots button.on:after{animation-play-state:paused}
+.dots .ar{width:46px;height:46px;border:1px solid var(--gold);border-radius:50%;color:var(--gold);transition:.4s;margin:0 0 0 8px}.dots .ar:nth-last-child(2){margin-left:auto}.dots .ar:hover{background:var(--gold);color:var(--bk)}
+.tt{cursor:grab}
+#lb.o{animation:lbf .4s}@keyframes lbf{from{opacity:0}}
+#up:hover{transform:translateY(-4px);background:var(--gold);color:var(--bk)}
+input:focus,select:focus,textarea:focus{box-shadow:0 1px 0 var(--gold)}
+/* cursor */
+#cu,#cr{position:fixed;left:0;top:0;pointer-events:none;z-index:100}
+#cu{width:6px;height:6px;margin:-3px 0 0 -3px;background:var(--gold);border-radius:50%}
+#cr{width:40px;height:40px;margin:-20px 0 0 -20px;border:1px solid var(--gold);border-radius:50%;display:grid;place-items:center;transition:width .4s var(--ease),height .4s var(--ease),margin .4s var(--ease),background .4s,opacity .3s}
+#cr span{font:600 9px var(--sans);letter-spacing:.2em;color:var(--bk);opacity:0;transition:opacity .3s}
+#cr.h{width:64px;height:64px;margin:-32px 0 0 -32px;background:rgba(198,165,104,.15)}
+#cr.bt{width:80px;height:80px;margin:-40px 0 0 -40px;background:rgba(198,165,104,.12)}
+#cr.lb{width:96px;height:96px;margin:-48px 0 0 -48px;background:var(--gold)}#cr.lb span{opacity:1}
+body.cur,body.cur a,body.cur button,body.cur summary,body.cur figure,body.cur .btn{cursor:none}
+.gs{scroll-behavior:auto}/* ===== round 3 ===== */
+header{top:var(--st,34px);padding:18px var(--pad)}
+header.s{top:0;padding-block:14px}
+.logo{width:auto;max-width:none;height:64px}header.s .logo{height:50px}
+@media(max-width:1020px){header{padding-block:12px}header.s{padding-block:10px}.logo{height:46px}header.s .logo{height:38px}}
+@media(max-width:640px){.strip{justify-content:center;font-size:10px;padding:6px 10px;line-height:1.6}}
+.hs-sec{padding-bottom:0}.hs .a img{transition:none}
+#contact .gring{animation:none;transform:none;position:absolute;right:auto;top:auto;border-radius:50%}
+#contact .g1{width:46vmin;height:46vmin;left:-10vmin;bottom:-14vmin;opacity:.35}
+#contact .g2{width:26vmin;height:26vmin;right:12%;left:auto;top:8%;opacity:.5}
+.gs .btn{transition:background .4s var(--ease),color .4s var(--ease),border-color .4s var(--ease)}#hero>div:first-child{position:relative;z-index:2}.hs-sec{padding-inline:0}.hs-sec>p,.hs-sec>h2{padding-inline:var(--pad)}.logo{object-fit:contain;flex:none}.mcta{display:none}.ind{right:calc(var(--pad) + 64px)}
+@media(max-width:1020px){.mcta{display:block;margin-top:18px}nav.o{box-shadow:-20px 0 60px rgba(0,0,0,.6);border-left:1px solid rgba(198,165,104,.35)}}
+@media(max-width:640px){.strip{flex-direction:column;align-items:center;gap:0}.cats{letter-spacing:.16em;gap:10px}.cats span+span:before{margin-right:10px}}
+
+/* ===== colour refinement: beige loader + navbar, contrast pass (colour only) ===== */
+/* loader */
+#ld{background:var(--bg)}
+#ld i{background:linear-gradient(90deg,var(--ant),var(--gold))}
+#ld u{border:1px solid rgba(169,133,72,.3);border-top-color:var(--gold);border-right-color:var(--ant)}
+#ld>div:before{content:"";position:absolute;inset:14%;border-radius:50%;border:1px solid rgba(169,133,72,.28);border-bottom-color:var(--ant);animation:rot 3.6s linear infinite reverse}
+/* header: beige in both states */
+header,header.s{background:var(--bg);color:var(--ch)}
+header{border-bottom:1px solid rgba(169,133,72,.28)}
+header.s{background:var(--bg);border-bottom:1px solid var(--ant);box-shadow:0 12px 40px rgba(9,9,9,.18)}
+nav a.nv{color:var(--ch);transition:color .4s var(--ease)}
+nav a.nv:hover,nav a.nv:focus-visible{color:var(--gold)}
+nav a.nv:after{background:linear-gradient(90deg,var(--ant),var(--gold),var(--ant));height:2px}
+#bg{color:var(--ch)}
+header .btn.fill{background:var(--bk);color:var(--wh);border-color:var(--bk)}
+header .btn.fill:hover{background:var(--gold);color:var(--bk);border-color:var(--ant)}
+.dd ul a{color:var(--bg)}.dd ul a:hover{color:var(--gold)}
+@media(max-width:1020px){
+nav{background:var(--bg)}
+nav a.nv{color:var(--ch)}
+.dd ul{background:transparent}
+.dd ul a{color:var(--ch)}.dd ul a:hover{color:var(--ant)}
+nav.o{border-left:1px solid rgba(169,133,72,.5);box-shadow:-20px 0 60px rgba(9,9,9,.35)}}
+/* buttons: black fill, white text, gold hover */
+.btn.fill{background:var(--bk);color:var(--wh);border-color:var(--gold)}
+.btn.fill:hover{background:var(--gold);color:var(--bk);border-color:var(--ant)}
+.btn.line{color:var(--ch);border-color:var(--ant)}
+.btn.line:hover{background:var(--gold);color:var(--bk)}
+.dark .btn.line,#hero .btn.line{color:var(--iv);border-color:var(--gold)}
+.dark .btn.line:hover,#hero .btn.line:hover{background:var(--gold);color:var(--bk)}
+.hs .ph3 .btn.fill{color:var(--wh)}.hs .ph3 .btn.fill:hover{color:var(--bk)}
+.hs .ph3 .btn.line{color:var(--ch)}
+/* light-section label under hero */
+#intro .lbl{color:var(--ch)}
+/* cursor: visible on light and dark */
+#cu{box-shadow:0 0 0 1px var(--ch)}
+#cr{box-shadow:0 0 0 1px rgba(21,21,21,.4)}
+/* contact form: readable on the light section */
+#contact input,#contact select,#contact textarea{color:var(--ch);border-bottom-color:var(--ant)}
+#contact input:focus,#contact select:focus,#contact textarea:focus{border-color:var(--gold);box-shadow:0 1px 0 var(--gold)}
+#contact ::placeholder{color:rgba(21,21,21,.6);opacity:1}
+#contact select option{color:var(--ch);background:var(--iv)}
+#contact #fm{color:var(--ch)}
+</style>
+</head>
+<body>
+<div id="ld"><div><img src="https://dermasmileaesthetics.com/wp-content/uploads/2026/10/derma-logo.svg" alt="Derma Smile"><i></i><u></u></div></div>
+<div id="cu"></div>
+<div class="strip"><span>Skin · Hair · Laser · Slimming | Bangalore</span><span><a href="tel:+919944022114">+91-9944022114</a> / <a href="tel:+919900017623">+91-99000 17623</a></span></div>
+<header id="hd">
+<a href="#top" aria-label="Derma Smile home"><img class="logo" src="https://dermasmileaesthetics.com/wp-content/uploads/2026/10/derma-logo.svg" alt="Derma Smile"></a>
+<nav id="nav" aria-label="Main"><ul>
+<li><a class="nv" href="#top">Home</a></li><li><a class="nv" href="#intro">About Us</a></li>
+<li class="dd"><a class="nv" href="#treatments">Treatments</a><ul>
+<li><a href="#t1">SMOOTH — Laser Hair Reduction</a></li><li><a href="#t2">CLEAR — Advanced Skin Treatments</a></li><li><a href="#t3">GLOW — Rejuvenation</a></li><li><a href="#t4">GROW — Hair &amp; Scalp</a></li><li><a href="#t5">SCULPT — Body Contouring</a></li></ul></li>
+<li><a class="nv" href="#results">Before &amp; After</a></li><li><a class="nv" href="https://dermasmileaesthetics.com/">Blogs</a></li><li><a class="nv" href="#contact">Contact Us</a></li><li class="mcta"><a class="btn fill" href="#contact">Book Free Consultation</a></li></ul></nav>
+<div class="hc"><a class="btn fill" href="#contact">Book Free Consultation</a><button id="bg" aria-label="Menu" aria-expanded="false"><span></span><span></span></button></div>
+</header>
+<main id="top">
+<section id="hero">
+<div><p class="lbl fu" style="animation-delay:.9s">Advanced Dermatology &amp; Aesthetic Care</p>
+<h1 id="h1">Healthy Skin. <em>Confident</em> You.</h1>
+<p class="fu" style="animation-delay:1.7s">Elevated skin, hair and aesthetic care tailored to your needs — guided by expertise and designed for natural, visible results.</p>
+<div class="cats fu" style="animation-delay:1.9s"><span>SKIN</span><span>HAIR</span><span>LASER</span><span>AESTHETICS</span></div>
+<div class="ctas fu" style="animation-delay:2.1s"><a class="btn fill mg" href="#contact">Book Free Consultation</a><a class="btn line mg" href="https://wa.me/919944022114" target="_blank" rel="noopener">WhatsApp Now</a></div></div>
+<div class="hv"><div class="ring r1"></div><div class="orb"></div><div class="ph"><img src="https://dermasmileaesthetics.com/wp-content/uploads/2026/10/97e44491-cfeb-4320-a828-a4cad0aee898-1024x819.png" alt="Derma Smile advanced skin, hair and aesthetic care" width="1024" height="819"></div><div class="ring r2"></div></div>
+</section>
+<section id="intro" class="rev"><div class="intro">
+<div><p class="lbl">Advanced Skin, Hair &amp; Aesthetic Care</p><h2>Naturally Beautiful. <em>Confidently</em> You.</h2><div class="gl"></div><p>Discover personalised treatments for healthier skin, stronger hair, and enhanced natural beauty — backed by advanced technology and expert care.</p><br><a class="btn fill" href="#contact">Book Free Consultation</a></div>
+<div class="im"><img loading="lazy" src="https://dermasmileaesthetics.com/wp-content/uploads/2026/10/fd4400da-7821-40a2-80c5-503b33691437-1024x640.png" alt="Personalised treatment at Derma Smile" width="1024" height="640"></div></div></section>
+<section id="treatments" class="dark">
+<p class="lbl">Our Signature Services</p><h2>Complete Aesthetic Care <em>Designed Around You</em></h2>
+<p style="max-width:620px;opacity:.8">From clearer skin and natural glow to hair growth, laser hair reduction and body sculpting—explore personalised treatments created around your individual goals.</p>
+<div id="trs"></div></section>
+<section id="concerns" class="dark" style="background:var(--bk)">
+<p class="lbl">Skin &amp; Hair</p><h2>Your Concerns. <em>Personalised</em> Care.</h2>
+<div class="cx"><div class="col"><h4>Skin Concerns</h4><ul id="sk"></ul></div><div class="col"><h4>Hair Concerns</h4><ul id="hr"></ul></div><div class="pv" id="pv"><div class="cap"><span id="pc"></span><a href="#contact">BOOK CONSULTATION</a></div></div></div></section>
+<section id="results"><p class="lbl">Results</p><h2>Natural Results That <em>Speak for Themselves</em></h2><p>Subtle. Real. Confident. Discover what’s possible with personalised care.</p><div class="gal" id="gal"></div></section>
+<section id="voices" class="dark"><p class="lbl">REAL PEOPLE. VISIBLE RESULTS.</p><h2>What Our <em>Patients</em> Say</h2>
+<div class="tm" id="tm"><div class="tt" id="tt"></div></div><div class="dots" id="dots"></div></section>
+<section id="faq"><p class="lbl">FAQ</p><h2>Frequently Asked <em>Questions</em></h2><div class="fq" id="fq"></div></section>
+<section id="contact">
+<div class="ring"></div>
+<div class="cg"><div><p class="lbl">Free Consultation</p><h2>Your Journey to <em>Confident Skin</em> Starts Here.</h2><p style="max-width:460px;opacity:.85">A consultation lets our team assess your concern, medical history and treatment goals before creating a personalised plan.</p></div>
+<form id="f"><input name="n" placeholder="Full Name" required autocomplete="name"><input name="p" type="tel" placeholder="Phone Number" required autocomplete="tel"><select name="t" required><option value="">Treatment Interest</option><option>SMOOTH — Laser Hair Reduction</option><option>CLEAR — Advanced Skin Treatments</option><option>GLOW — Rejuvenation &amp; Glow</option><option>GROW — Hair &amp; Scalp</option><option>SCULPT — Body Contouring</option></select><textarea name="m" rows="3" placeholder="Message"></textarea><button class="btn fill mg" type="submit">Book Your Free Consultation</button><p id="fm" role="status"></p></form></div></section>
+</main>
+<footer><div class="fg">
+<div><img class="fl" src="https://dermasmileaesthetics.com/wp-content/uploads/2026/09/Untitled-design-90.png" alt="Derma Smile" width="170" height="60" loading="lazy"><p style="font-size:14px">Skin · Hair · Laser · Slimming<br>Bangalore</p></div>
+<div><h5>Quick Links</h5><ul><li><a href="#top">Home</a></li><li><a href="#intro">About Us</a></li><li><a href="#results">Before &amp; After</a></li><li><a href="https://dermasmileaesthetics.com/">Blogs</a></li><li><a href="#contact">Contact Us</a></li></ul></div>
+<div><h5>Treatments</h5><ul><li><a href="#t2">Skin Treatments</a></li><li><a href="#t4">Hair Treatments</a></li><li><a href="#t1">Laser Treatments</a></li><li><a href="#t5">Slimming Treatments</a></li></ul></div>
+<div><h5>Contact Information</h5><ul><li><a href="tel:+919944022114">+91-9944022114</a></li><li><a href="tel:+919900017623">+91-99000 17623</a></li><li><a href="https://wa.me/919944022114" target="_blank" rel="noopener">WhatsApp</a></li><li>Kodathi Gate, Sarjapur–Marathahalli Rd, Bengaluru 562125</li></ul></div></div>
+<div class="cp"><span>© 2026 Derma Smile Aesthetic Clinic. All rights reserved.</span></div></footer>
+<button id="up" aria-label="Back to top">↑</button>
+<div id="lb" role="dialog" aria-label="Image viewer"><button class="x" aria-label="Close">×</button><button class="p" aria-label="Previous">‹</button><img alt=""><button class="n" aria-label="Next">›</button><p></p></div>
+<script>
+(()=>{
+const U='https://dermasmileaesthetics.com/wp-content/uploads/',$=(s,e=document)=>e.querySelector(s),$$=(s,e=document)=>[...e.querySelectorAll(s)];
+const img=(p,a,w,h)=>`<img loading="lazy" src="${U}${p}" alt="${a}" width="${w||1024}" height="${h||768}">`;
+/* data */
+const T=[['SMOOTH','Laser Hair Reduction','Experience a smarter approach to unwanted hair with personalised Laser Hair Reduction plans tailored to your skin type, hair pattern and treatment goals.',['Face & Underarms','Arms & Legs','Bikini, Chest & Back','Full Body'],['2026/10/ef001080-b4ee-4781-aa41-01ae0d9bc454.png','2026/10/f6545d93-e923-410a-a442-ed20be73a31c.png']],
+['CLEAR','Advanced Skin Treatments','Discover personalised skin treatments designed to address concerns like acne, pigmentation, uneven texture, dullness and signs of ageing—based on your skin needs and treatment goals.',['Acne & Acne Scars','Pigmentation & Dark Spots','Dullness & Uneven Texture','Ageing & Skin Rejuvenation'],['2026/09/Untitled-design-2026-09-12T152427.908.png','2026/09/Untitled-design-2026-09-12T152414.183.png']],
+['GLOW','Skin Rejuvenation & Glow Treatments','Experience personalised glow and rejuvenation treatments designed to improve dullness, dehydration, uneven skin tone and early signs of ageing—helping your skin look fresher, smoother and more radiant.',['Hydration & Skin Glow','Dull & Uneven Skin','Fine Lines & Early Ageing','Skin Rejuvenation & Facials'],['2026/09/Untitled-design-2026-09-12T153507.916.png','2026/10/a7b1a3c9-725b-4795-8dc8-23abb37ba03c.png']],
+['GROW','Hair Growth & Scalp Treatments','Discover personalised hair and scalp treatments designed to address hair fall, thinning, weak roots and scalp concerns—helping support healthier hair growth and improved hair quality.',['Hair Fall & Thinning','Weak Roots & Hair Quality','Scalp Health','Hair Growth & Restoration'],['2026/10/Untitled-Design-33.png','2026/10/350bbb37-87bd-4cd0-9497-b2ad1e63fa85.png']],
+['SCULPT','Body Contouring & Shape Treatments','Explore personalised body contouring treatments designed to target stubborn fat, improve body definition and support a more sculpted appearance—based on your body goals and treatment suitability.',['Abdomen & Waist','Arms & Thighs','Double Chin & Jawline','Full Body Contouring'],['2026/10/Untitled-Design-34.png','2026/10/6ff22199-e494-49ed-ad93-ec492470ccab.png']]];
+$('#trs').innerHTML=T.map((t,i)=>`<article class="tr rev ph${i+1} ${i%2?'':''}" id="t${i+1}"><div class="ims"><div class="a">${img(t[4][0],t[0]+' — '+t[1])}</div><div class="b">${img(t[4][1],t[0]+' treatment detail')}</div></div><div class="tx"><span class="num">0${i+1}</span><h3>${t[0]}</h3><h4>${t[1]}</h4><p>${t[2]}</p><ul>${t[3].map(x=>`<li>${x}</li>`).join('')}</ul><a class="btn line mg" href="#contact" data-t="${i}">Explore ${t[0][0]+t[0].slice(1).toLowerCase()}</a></div></article>`).join('');
+const S=[['Acne Treatment','Untitled-Design-9'],['Skin Brightening','Untitled-Design-12'],['Pigmentation','Untitled-Design-10'],['Dark Spot','Untitled-Design-11'],['Anti-Aging & Wrinkle','Untitled-Design-13']],
+H=[['Hair Fall','f9bf5928-c268-4c4b-bb78-57ada468efd7'],['Hair Growth','67dd6bb1-1a62-43d1-a605-3f56d416c3b7'],['Hair Thinning','26ae452e-775f-4757-9ac6-36b0df41f9e5'],['Receding Hairline','Untitled-Design-18'],['Dandruff & Scalp Issue','f7848129-810e-4050-98c3-0e5f5a8ac506'],['Patchy Beard','Untitled-Design-21'],['Dull & Weak Hair','Untitled-Design-17']];
+const pv=$('#pv'),pc=$('#pc'),all=[...S,...H];
+all.forEach(c=>pv.insertAdjacentHTML('afterbegin',`<img loading="lazy" src="${U}2026/10/${c[1]}.png" alt="${c[0]}">`));
+const pim=$$('img',pv);
+const li=(a,o)=>a.map((c,i)=>`<li><button data-i="${i+o}">${c[0]}</button></li>`).join('');
+$('#sk').innerHTML=li(S,0);$('#hr').innerHTML=li(H,S.length);
+const pick=i=>{$$('.cx button').forEach(b=>b.classList.toggle('on',+b.dataset.i===i));pim.forEach((m,k)=>{const on=k===all.length-1-i;if(!on&&m.classList.contains('on')){m.classList.add('pr');setTimeout(()=>m.classList.remove('pr'),1000)}m.classList.toggle('on',on)});pc.textContent=all[i][0]};
+$$('.cx button').forEach(b=>{b.onmouseenter=b.onclick=()=>pick(+b.dataset.i)});pick(0);
+const G=[['Acne Transformation','2026/09/Acne-Transformation-1024x683.png'],['Pigmentation Treatment','2026/09/Pigmentation-Treatment-1024x683.png'],['Hair Restoration','2026/09/Hair-Restoration-1024x683.png'],['Body Contouring','2026/09/Body-Contouring1-1024x683.png']];
+$('#gal').innerHTML=G.map((g,i)=>`<figure data-i="${i}">${img(g[1],g[0],1024,683)}<figcaption>${g[0]}</figcaption></figure>`).join('');
+const R=[['The consultation felt very personalised, and every step of my treatment was explained clearly. The overall experience was comfortable and professional.','Priya S.','Indiranagar, Bangalore'],['The treatment plan was explained properly and felt customised to my needs. I was especially happy with the consultation and follow-up.','Priya S.','HSR Layout, Bangalore'],['I liked how the team first understood my skin concerns before recommending any treatment. The clinic experience felt calm, premium and well managed.','Rahul K.','Whitefield, Bangalore'],['My laser hair reduction sessions have been smooth and comfortable. The team is professional, attentive and makes the whole process easy.','Ananya R.','Koramangala, Bangalore']];
+$('#tt').innerHTML=R.map(r=>`<blockquote><div class="stars" aria-label="5 stars">${'<i>★</i>'.repeat(5)}</div><q>${r[0]}</q><cite>${r[1]} — ${r[2]}</cite></blockquote>`).join('');
+$('#dots').innerHTML=R.map((_,i)=>`<button aria-label="Slide ${i+1}"></button>`).join('');
+const Q=[['Are the treatments at Derma Smile suitable for all skin types?','Most treatments can be customised for different skin types and concerns. Before starting, our experts assess your skin condition and recommend a suitable treatment plan.'],['Is Laser Hair Reduction safe?','Laser Hair Reduction is generally considered safe when performed using appropriate technology and protocols. Treatment settings are selected according to your skin tone, hair type and treatment area.'],['How many Laser Hair Reduction sessions are usually required?','The number of sessions varies depending on hair thickness, growth cycle, treatment area and individual response. A personalised session plan is recommended after consultation.'],['Can acne scars and pigmentation be treated together?','In some cases, a combined treatment approach may be recommended. The exact plan depends on the type of acne scars, pigmentation depth, skin sensitivity and overall skin condition.'],['What treatments are available for hair fall and thinning?','Derma Smile offers personalised hair and scalp treatments for concerns such as hair fall, thinning, weak roots and reduced hair quality. The appropriate option is selected after evaluating the underlying concern.'],['Do you offer PRP and GFC treatments for hair growth?','Yes. PRP Hair and GFC Hair are among the hair-related treatment options listed by Derma Smile. A consultation helps determine whether these treatments are suitable for your condition.'],['What is body contouring?','Body contouring treatments are designed to target specific areas and improve body definition. At Derma Smile, treatment areas include the abdomen, waist, arms, thighs, double chin and jawline.'],['Do I need a consultation before booking a treatment?','A consultation is recommended because it allows the team to assess your concern, medical history and treatment goals before creating a personalised plan.']];
+$('#fq').innerHTML=Q.map(q=>`<details><summary>${q[0]}<span class="pm"></span></summary><div class="ans"><div><p>${q[1]}</p></div></div></details>`).join('');
+$$('#fq details').forEach(d=>d.ontoggle=()=>{if(d.open)$$('#fq details').forEach(o=>o!==d&&(o.open=false))});
+/* hero words */
+const h1=$('#h1');let k=0;h1.innerHTML=[...h1.childNodes].map(n=>n.nodeType==3?n.textContent.split(' ').filter(Boolean).map(w=>`<span class="w"><b style="animation-delay:${.7+k++*.15}s">${w}</b></span>`).join(' '):`<span class="w"><b style="animation-delay:${.7+k++*.15}s">${n.outerHTML}</b></span>`).join(' ');
+/* loader */
+let dn=0;const done=()=>{if(dn++)return;$('#ld').classList.add('off');document.body.classList.add('ready')};addEventListener('load',()=>setTimeout(done,1300));setTimeout(done,2800);
+/* header, menu, up */
+const hd=$('#hd'),up=$('#up'),nav=$('#nav');
+addEventListener('scroll',()=>{hd.classList.toggle('s',scrollY>40);up.classList.toggle('s',scrollY>800)},{passive:true});
+const bgb=$('#bg'),tg=o=>{nav.classList.toggle('o',o);bgb.classList.toggle('o',o);bgb.setAttribute('aria-expanded',o);document.body.classList.toggle('lock',o)};bgb.onclick=()=>tg(!nav.classList.contains('o'));$$('nav a').forEach(a=>a.onclick=()=>tg(false));
+up.onclick=()=>scrollTo({top:0,behavior:'smooth'});
+/* reveal */
+const io=new IntersectionObserver(e=>e.forEach(x=>x.isIntersecting&&(x.target.classList.add('in'),io.unobserve(x.target))),{threshold:.12});$$('.rev').forEach(e=>io.observe(e));
+/* testimonials */
+const tt=$('#tt'),ds=$$('#dots button'),bq=$$('blockquote');let ci=0,pause=false,x0=null;
+const go=i=>{ci=(i+R.length)%R.length;tt.style.transform=`translateX(${-ci*100}%)`;ds.forEach((d,j)=>d.classList.toggle('on',j===ci));bq.forEach((b,j)=>b.classList.toggle('on',j===ci))};
+ds.forEach((d,i)=>d.onclick=()=>go(i));go(0);
+const tm=$('#tm');tm.onmouseenter=()=>pause=true;tm.onmouseleave=()=>pause=false;
+tm.addEventListener('touchstart',e=>x0=e.touches[0].clientX,{passive:true});tm.addEventListener('touchend',e=>{if(x0!=null){const d=e.changedTouches[0].clientX-x0;if(Math.abs(d)>40)go(ci+(d<0?1:-1));x0=null}});
+setInterval(()=>!pause&&!document.hidden&&go(ci+1),6000);
+/* lightbox */
+const lb=$('#lb'),lm=$('img',lb);let gi=0;
+const show=i=>{gi=(i+G.length)%G.length;lm.src=U+G[gi][1];lm.alt=G[gi][0];$('p',lb).textContent=G[gi][0]};
+$$('#gal figure').forEach(f=>f.onclick=()=>{show(+f.dataset.i);lb.classList.add('o')});
+$('.x',lb).onclick=()=>lb.classList.remove('o');$('.p',lb).onclick=()=>show(gi-1);$('.n',lb).onclick=()=>show(gi+1);
+addEventListener('keydown',e=>{if(!lb.classList.contains('o'))return;if(e.key=='Escape')lb.classList.remove('o');if(e.key=='ArrowLeft')show(gi-1);if(e.key=='ArrowRight')show(gi+1)});
+/* treatment CTA preselects form */
+$$('[data-t]').forEach(a=>a.onclick=()=>{$('select[name=t]').selectedIndex=+a.dataset.t+1});
+/* form: no backend, so hand off to the clinic's WhatsApp with the details prefilled */
+$('#f').onsubmit=e=>{e.preventDefault();const d=new FormData(e.target),m=`Hello Derma Smile, I'd like a free consultation.\nName: ${d.get('n')}\nPhone: ${d.get('p')}\nInterest: ${d.get('t')}\nMessage: ${d.get('m')||'-'}`;
+$('#fm').innerHTML='No online booking system is connected. Your details are not sent yet — <a href="https://wa.me/919944022114?text='+encodeURIComponent(m)+'" target="_blank" rel="noopener" style="color:var(--gold);text-decoration:underline">continue on WhatsApp</a> or call +91-9944022114.'};
+})();
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+<script>
+/* Cinematic layer: every effect degrades gracefully if a CDN library fails */
+(()=>{
+const $=(s,e=document)=>e.querySelector(s),$$=(s,e=document)=>[...e.querySelectorAll(s)];
+const RM=matchMedia('(prefers-reduced-motion:reduce)').matches,FINE=matchMedia('(hover:hover) and (pointer:fine)').matches,G=!!(window.gsap&&window.ScrollTrigger);
+const stp=()=>document.documentElement.style.setProperty('--st',$('.strip').offsetHeight+'px');stp();addEventListener('resize',stp);addEventListener('load',stp);
+let mx=innerWidth/2,my=innerHeight/2,cx=mx,cy=my,tx=0,ty=0,cur=null,R3=null,heroVis=true;
+/* progress bar */
+const pg=document.createElement('div');pg.id='pg';document.body.appendChild(pg);let sp=0;
+addEventListener('scroll',()=>{sp||(sp=requestAnimationFrame(()=>{sp=0;pg.style.transform=`scaleX(${scrollY/((document.documentElement.scrollHeight-innerHeight)||1)})`}))},{passive:true});
+$('#hero').insertAdjacentHTML('beforeend','<a class="sc" href="#intro" aria-label="Scroll down"><i></i></a>');
+/* cursor */
+if(FINE&&!RM){document.body.insertAdjacentHTML('beforeend','<div id="cu"></div><div id="cr"><span></span></div>');
+cur=$('#cr');const dot=$('#cu'),lab=$('span',cur);document.body.classList.add('cur');
+$$('.ims').forEach(e=>e.dataset.cur='EXPLORE');$$('.gal figure').forEach(e=>e.dataset.cur='VIEW');$('#tm').dataset.cur='DRAG';
+addEventListener('mousemove',e=>{mx=e.clientX;my=e.clientY;dot.style.transform=`translate(${mx}px,${my}px)`},{passive:true});
+document.addEventListener('mouseover',e=>{const t=e.target.closest('[data-cur],a,button,summary,.btn');const l=t&&t.dataset.cur;cur.classList.toggle('lb',!!l);cur.classList.toggle('bt',!!t&&!l&&t.matches('.btn'));cur.classList.toggle('h',!!t&&!l&&!t.matches('.btn'));if(l)lab.textContent=l});
+document.documentElement.addEventListener('mouseleave',()=>{cur.style.opacity=0;dot.style.opacity=0});document.documentElement.addEventListener('mouseenter',()=>{cur.style.opacity=1;dot.style.opacity=1});
+/* magnetic buttons + image tilt */
+$$('.btn').forEach(b=>{b.addEventListener('mousemove',e=>{const r=b.getBoundingClientRect();b.style.transform=`translate(${(e.clientX-r.left-r.width/2)*.22}px,${(e.clientY-r.top-r.height/2)*.3-3}px)`});b.addEventListener('mouseleave',()=>{const c=b.style.transform;b.style.transform='';if(c)b.animate([{transform:c},{transform:'none'}],{duration:450,easing:'cubic-bezier(.2,.7,.2,1)'})})});
+$$('.ims').forEach(p=>{const a=$('.a',p);p.addEventListener('mousemove',e=>{const r=p.getBoundingClientRect(),x=(e.clientX-r.left)/r.width-.5,y=(e.clientY-r.top)/r.height-.5;a.style.transform=`rotateY(${x*7}deg) rotateX(${-y*7}deg)`});p.addEventListener('mouseleave',()=>a.style.transform='')})}
+/* hero 3D (procedural Three.js, desktop/tablet only) */
+const hv=$('.hv'),ph=$('.hv .ph');
+new IntersectionObserver(e=>heroVis=e[0].isIntersecting).observe($('#hero'));
+if(window.THREE&&innerWidth>=768&&!RM){try{
+const T=THREE,cv=document.createElement('canvas');hv.prepend(cv);
+const rd=new T.WebGLRenderer({canvas:cv,alpha:true,antialias:true});rd.setPixelRatio(Math.min(devicePixelRatio,innerWidth<1024?1:1.75));rd.toneMapping=T.ACESFilmicToneMapping;rd.toneMappingExposure=1.1;rd.outputEncoding=T.sRGBEncoding;
+const sc=new T.Scene(),cam=new T.PerspectiveCamera(40,1,.1,50);cam.position.z=7.2;
+const c=document.createElement('canvas');c.width=512;c.height=256;const x=c.getContext('2d');x.fillStyle='#120d06';x.fillRect(0,0,512,256);
+[[40,30,120,60,'#fff'],[220,60,90,120,'#ffe7b0'],[360,20,110,50,'#fff'],[130,170,200,30,'#c6a568'],[440,120,50,100,'#fff']].forEach(a=>{x.fillStyle=a[4];x.fillRect(a[0],a[1],a[2],a[3])});
+const et=new T.CanvasTexture(c);et.mapping=T.EquirectangularReflectionMapping;et.encoding=T.sRGBEncoding;
+const pm=new T.PMREMGenerator(rd);sc.environment=pm.fromEquirectangular(et).texture;pm.dispose();et.dispose();
+sc.add(new T.DirectionalLight(0xfff0d0,.8));
+const gold=new T.MeshStandardMaterial({color:0xC6A568,metalness:1,roughness:.22,envMapIntensity:1.3});
+const r1=new T.Mesh(new T.TorusGeometry(1.75,.045,24,160),gold);r1.rotation.x=1.15;
+const o2=new T.Group(),r2=new T.Mesh(new T.TorusGeometry(1.25,.028,16,120),gold);r2.rotation.y=1.2;o2.add(r2);
+const orb=new T.Mesh(new T.SphereGeometry(.38,48,48),new T.MeshPhysicalMaterial({color:0xffffff,metalness:0,roughness:.03,transmission:1,thickness:.6,ior:1.4,clearcoat:1,envMapIntensity:1.6}));orb.position.set(1.45,1.5,.9);
+const rib=new T.Mesh(new T.TubeGeometry(new T.CatmullRomCurve3([[1.6,-1.6,0],[1.2,-.8,.6],[1.9,0,0],[1.4,.9,-.5],[1.8,1.7,.2]].map(p=>new T.Vector3(...p))),120,.035,8,false),gold);
+const grp=new T.Group();grp.add(r1,o2,orb,rib);sc.add(grp);hv.classList.add('gl3');
+const rs=()=>{const w=cv.clientWidth,h=cv.clientHeight;rd.setSize(w,h,false);cam.aspect=w/h;cam.updateProjectionMatrix()};rs();addEventListener('resize',rs);
+R3=(t,px,py)=>{const s=scrollY/innerHeight;r1.rotation.z=t*.18+s*2;o2.rotation.z=-t*.4;o2.rotation.x=.5+Math.sin(t*.3)*.3;orb.position.y=1.5+Math.sin(t*.9)*.12;rib.rotation.y=Math.sin(t*.4)*.35;grp.rotation.y=px*.5;grp.rotation.x=py*.3;cv.style.transform=`translate(${px*30}px,${py*24-s*60}px)`;rd.render(sc,cam)};
+addEventListener('pagehide',()=>rd.dispose())}catch(err){console.warn('3D disabled',err)}}
+/* single rAF loop: cursor trail, hero tilt/float, 3D render */
+const tick=t=>{requestAnimationFrame(tick);t*=.001;
+if(cur){cx+=(mx-cx)*.16;cy+=(my-cy)*.16;cur.style.transform=`translate(${cx}px,${cy}px)`}
+if(heroVis&&!RM){tx+=(mx/innerWidth-.5-tx)*.06;ty+=(my/innerHeight-.5-ty)*.06;
+ph.style.transform=FINE?`translate3d(${tx*-24}px,${ty*-20+Math.sin(t)*7}px,0) rotateY(${tx*10}deg) rotateX(${-ty*8}deg)`:`translateY(${Math.sin(t)*6}px)`;
+if(R3)R3(t,tx,ty)}};requestAnimationFrame(tick);
+/* carousel arrows, lightbox swipe */
+const dots=$('#dots');dots.insertAdjacentHTML('beforeend','<button class="ar" aria-label="Previous testimonial">←</button><button class="ar" aria-label="Next testimonial">→</button>');
+const ds=$$('#dots button:not(.ar)'),ar=$$('#dots .ar');
+ar.forEach((b,i)=>b.onclick=()=>{const c=ds.findIndex(d=>d.classList.contains('on'));ds[(c+(i?1:-1)+ds.length)%ds.length].click()});
+const lb=$('#lb');let lx=null;lb.addEventListener('touchstart',e=>lx=e.touches[0].clientX,{passive:true});
+lb.addEventListener('touchend',e=>{if(lx==null)return;const d=e.changedTouches[0].clientX-lx;lx=null;if(Math.abs(d)>50)$(d<0?'.n':'.p',lb).click()});
+/* GSAP scroll system */
+if(!G||RM)return;
+gsap.registerPlugin(ScrollTrigger);document.documentElement.classList.add('gs');$$('.rev').forEach(e=>e.classList.remove('rev'));
+const f=n=>{if(n.nodeType==3){const s=n.textContent;return(/^\s/.test(s)?' ':'')+s.split(/\s+/).filter(Boolean).map(w=>`<span class="sw"><i>${w}</i></span>`).join(' ')+(/\s$/.test(s)?' ':'')}const g=n.tagName.toLowerCase();return`<${g}>${[...n.childNodes].map(f).join('')}</${g}>`};
+$$('section h2').forEach(h=>{h.innerHTML=[...h.childNodes].map(f).join('');gsap.from($$('.sw i',h),{yPercent:115,duration:1.1,ease:'power4.out',stagger:.07,scrollTrigger:{trigger:h,start:'top 88%'}})});
+$$('.lbl').forEach(l=>{if(!l.closest('#hero'))gsap.from(l,{x:-30,opacity:0,duration:1.2,ease:'power3.out',scrollTrigger:{trigger:l,start:'top 92%'}})});
+const st=(t,s='top 80%')=>({trigger:t,start:s});
+gsap.from('#intro .im',{clipPath:'inset(0 100% 0 0)',duration:1.6,ease:'power4.inOut',scrollTrigger:st('#intro .im')});
+gsap.from('#intro .im img',{scale:1.4,duration:1.9,ease:'power3.out',scrollTrigger:st('#intro .im')});
+gsap.from('#intro .intro>div:first-child>*:not(h2):not(.lbl):not(.gl)',{y:30,opacity:0,stagger:.12,duration:1,scrollTrigger:st('#intro','top 65%')});
+gsap.fromTo('.gl',{width:0},{width:120,duration:1.6,ease:'power3.out',scrollTrigger:st('#intro','top 65%')});
+const dirs=['inset(0 100% 0 0)','inset(100% 0 0 0)','inset(0 0 0 100%)','inset(0 0 100% 0)'];
+$$('.gal figure').forEach((fg,i)=>{gsap.from(fg,{clipPath:dirs[i%4],duration:1.4,ease:'power4.inOut',scrollTrigger:st(fg,'top 88%')});
+gsap.fromTo($('img',fg),{yPercent:-8,scale:1.2},{yPercent:8,ease:'none',scrollTrigger:{trigger:fg,scrub:true}})});
+gsap.from('.cx li',{x:-30,opacity:0,stagger:.04,duration:.8,scrollTrigger:st('.cx','top 75%')});
+gsap.from('#pv',{clipPath:'inset(100% 0 0 0)',duration:1.4,ease:'power4.inOut',scrollTrigger:st('.cx','top 75%')});
+gsap.from('#tm',{y:60,opacity:0,duration:1.1,ease:'power3.out',scrollTrigger:st('#tm','top 88%')});
+gsap.from('#fq details',{y:30,opacity:0,stagger:.07,duration:.8,scrollTrigger:st('#fq','top 85%')});
+gsap.from('#f>*',{y:40,opacity:0,stagger:.1,duration:1,ease:'power3.out',scrollTrigger:st('#f','top 88%')});
+gsap.from('footer .fg>*',{y:60,opacity:0,stagger:.1,duration:1,ease:'power3.out',scrollTrigger:st('footer','top 92%')});
+$$('main>section').forEach((sc,i)=>{if(i<1||sc.id=='treatments')return;gsap.fromTo(sc,{clipPath:'inset(70px 3% 0% 3%)'},{clipPath:'inset(0px 0% 0% 0%)',ease:'none',scrollTrigger:{trigger:sc,start:'top bottom',end:'top 35%',scrub:true}})});
+$('#contact').insertAdjacentHTML('afterbegin','<div class="ring gring g1"></div><div class="ring gring g2"></div>');
+gsap.fromTo('.gring',{rotation:0,rotationX:62,y:90,transformPerspective:900},{rotation:320,y:-130,ease:'none',scrollTrigger:{trigger:'#contact',start:'top bottom',end:'bottom top',scrub:true}});
+/* pinned horizontal treatments (desktop) / light parallax (mobile) */
+const trs=$('#trs'),mm=gsap.matchMedia();
+mm.add('(min-width:1024px)',()=>{
+const ps=$$('.tr',trs),n=ps.length,trk=document.createElement('div');trk.className='trk';ps.forEach(p=>trk.appendChild(p));trs.appendChild(trk);trs.classList.add('hs');trs.closest('section').classList.add('hs-sec');
+trs.insertAdjacentHTML('beforeend','<div class="ind"><b>01</b><span><i></i></span><b>05</b></div><div class="ring hr"></div>');
+const cn=$('.ind b',trs),bar=$('.ind i',trs),rg=$('.hr',trs);
+const tw=gsap.to(trk,{xPercent:-100*(n-1)/n,ease:'none',scrollTrigger:{trigger:trs,pin:true,scrub:1,anticipatePin:1,refreshPriority:1,start:'top top',end:()=>'+='+innerHeight*n*.9,invalidateOnRefresh:true,
+onUpdate:s=>{cn.textContent='0'+(Math.round(s.progress*(n-1))+1);bar.style.transform=`scaleX(${s.progress})`;rg.style.transform=`translate(-50%,-50%) rotateX(65deg) rotate(${s.progress*540}deg)`}}});
+ps.forEach((p,i)=>{gsap.fromTo($('.ims',p),{xPercent:14},{xPercent:-14,ease:'none',scrollTrigger:{trigger:p,containerAnimation:tw,start:'left right',end:'right left',scrub:true}});
+gsap.fromTo($('.a img',p),{scale:1.25},{scale:1,ease:'none',scrollTrigger:{trigger:p,containerAnimation:tw,start:'left right',end:'left 20%',scrub:true}});
+if(i)gsap.from($$('.tx>*',p),{y:50,opacity:0,stagger:.07,duration:.9,ease:'power3.out',scrollTrigger:{trigger:p,containerAnimation:tw,start:'left 70%',toggleActions:'play none none reverse'}})});
+return()=>{ps.forEach(p=>trs.insertBefore(p,trk));trk.remove();$('.ind',trs).remove();rg.remove();trs.classList.remove('hs');trs.closest('section').classList.remove('hs-sec')}});
+mm.add('(max-width:1023px)',()=>{$$('.tr').forEach(p=>{gsap.fromTo($('.ims .b',p),{yPercent:8},{yPercent:-8,ease:'none',scrollTrigger:{trigger:p,scrub:true}});gsap.from($$('.tx>*',p),{y:30,opacity:0,stagger:.06,duration:.8,scrollTrigger:st(p,'top 78%')})})});
+$$('a[href^="#t"]').forEach(a=>{const m=/^#t(\d)$/.exec(a.getAttribute('href'));if(m)a.addEventListener('click',e=>{const s=ScrollTrigger.getAll().find(x=>x.pin===trs);if(!s)return;e.preventDefault();scrollTo({top:s.start+(m[1]-1)/4*(s.end-s.start),behavior:'smooth'})})});
+$$('a[href^="#"]').forEach(a=>{const h=a.getAttribute('href');if(h.length<2||/^#t\d$/.test(h))return;const el=$(h);if(el)a.addEventListener('click',e=>{e.preventDefault();scrollTo({top:el.getBoundingClientRect().top+scrollY,behavior:'smooth'});history.pushState(null,'',h)})});
+addEventListener('load',()=>ScrollTrigger.refresh());document.fonts&&document.fonts.ready.then(()=>ScrollTrigger.refresh());
+})();
+</script>
+</body>
+</html>
