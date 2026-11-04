@@ -625,7 +625,7 @@ h3{font-size:clamp(22px,2vw,28px)}
    RESPONSIVE LAYER — additive only (content, GSAP/Lenis animations untouched)
    Covers: 280px phones → tablets → laptops → 4K / ultra-wide
    ======================================================================== */
-html{-webkit-text-size-adjust:100%;text-size-adjust:100%;overflow-x:hidden}
+html{-webkit-text-size-adjust:100%;text-size-adjust:100%}
 body{min-width:280px;overflow-wrap:break-word;-webkit-tap-highlight-color:transparent}
 img,svg,video,iframe{max-width:100%}
 h1,h2,h3,.display{overflow-wrap:break-word;hyphens:manual}
@@ -854,6 +854,34 @@ h1,h2,h3,.display{overflow-wrap:break-word;hyphens:manual}
 .burger i{transform-origin:center}
 .burger.open i:nth-child(1){transform:translateY(3.25px) rotate(45deg)}
 .burger.open i:nth-child(2){transform:translateY(-3.25px) rotate(-45deg)}
+
+/* ---------- About page fixes ---------- */
+@media(max-width:860px){
+  .hero-inner{grid-template-columns:1fr}            /* tablet rule above had re-created 2 columns */
+  .ab-hero h1{max-width:13ch}
+  .ab-media{aspect-ratio:4/3;margin-top:28px}
+  .ab-phil{gap:28px}
+  .ab-stack{display:grid;gap:16px}
+  .ab-stack .stk{margin-bottom:0;transform:none!important}
+  .ab-stack .ph{aspect-ratio:4/3.4;border-radius:22px;box-shadow:0 12px 36px rgba(0,0,0,.1)}
+  .hw-img .ph{aspect-ratio:4/3}
+  .founder{min-height:0;padding:44px 20px}
+  .fq-text{font-size:clamp(19px,5.2vw,28px);line-height:1.35}
+  .fc{gap:22px}
+}
+@media(min-width:861px) and (max-height:760px){
+  .ab-sticky{position:static}
+  .hw-img{top:96px}
+}
+@media(max-width:600px){
+  .ab-media{aspect-ratio:1/1;border-radius:22px}
+  .ab-stack .ph{aspect-ratio:1/1}
+  .hw-img .ph{aspect-ratio:1/1}
+  .founder{padding:36px 16px}
+  .team-grid{margin-top:32px;gap:14px}
+  .tm{aspect-ratio:4/4.6}
+  .hw-item h3{font-size:clamp(22px,6.4vw,28px)}
+}
 </style>
 </head>
 <body>
