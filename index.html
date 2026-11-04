@@ -1328,6 +1328,23 @@ a.ph-chip:hover::before{opacity:1}
 .fgrid li a:hover::after{transform:scaleX(1);transform-origin:left}
 @media(prefers-reduced-motion:reduce){.btn,.btn *,.btn::before,.btn::after,.socials a,.totop,.nav-links a::after,.ph-link::after{transition-duration:.01ms!important;animation:none!important}}
 
+
+/* ---------- Our Treatments (mobile): pinned one-screen layout so the desktop fly-in animation works ---------- */
+@media(max-width:860px){
+  .ovp{height:100vh;height:100svh;padding:0;display:flex;align-items:center;overflow:hidden}
+  .ovp-stage{position:relative;inset:auto;width:min(100% - var(--pad)*2,560px);margin:0 auto;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
+  .ovp-intro{grid-column:1/-1;position:relative;left:auto;top:auto;transform:none;width:100%;margin-bottom:8px}
+  .ovp-intro h2{font-size:clamp(26px,8vw,38px)}
+  .ovp-intro .lead{font-size:13.5px}
+  .ovp-card{position:relative;width:100%;left:auto!important;right:auto!important;top:auto!important;bottom:auto!important;padding:14px 12px;border-radius:20px}
+  .ovp-card .ico{width:30px;height:30px;margin-bottom:8px;font-size:14px}
+  .ovp-card h3{font-size:15px}
+  .ovp-card p{font-size:12px;line-height:1.35}
+}
+@media(max-width:860px) and (max-height:640px){
+  .ovp-intro .lead{display:none}
+  .ovp-card p{font-size:11.5px}
+}
 </style>
 </head>
 <body>
@@ -1730,7 +1747,7 @@ ${pageHero('About Derma Smile','Dermatology With a Human Touch.','',A.wide,{cta:
 </div></div></section>
 
 <section class="sec"><div class="wrap">
-  ${headCenter('Our Team','Expert Care, Your Way.','Specialised care across skin, hair, laser and aesthetics, all in one clinic.')}
+  ${headCenter('Our Expertise','Expert Care, Your Way.','Specialised care across skin, hair, laser and aesthetics, all in one clinic.')}
   <div class="team-grid">${[['Dermatology','Skin Health & Acne Care',TREAT['skin-treatment'].img2],['Laser Care','Laser Hair Reduction',TREAT['laser-hair-reduction'].img],['Hair & Scalp','PRP, GFC & Scalp Care',TREAT['hair-treatment'].img2],['Aesthetics','Glow & Body Contouring',TREAT.glow.img]].map(x=>`<article class="tm"><div style="position:absolute;inset:0">${img(x[2],x[0])}</div><div class="cap"><b>${x[0]}</b><span>${x[1]}</span><p>Personalised planning, careful assessment and ongoing guidance at every step.</p></div></article>`).join('')}</div>
 </div></section>
 ${ctaBlock()}`;
@@ -1935,15 +1952,13 @@ function animate(root){
     const ovp=root.querySelector('.ovp');
     if(ovp){
       const cards=gsap.utils.toArray(ovp.querySelectorAll('.ovp-card'));
-      if(matchMedia('(min-width:861px)').matches){
-        gsap.set(cards,{y:()=>innerHeight*1.15,opacity:0,rotate:i=>i%2?7:-7});
-        const tl=gsap.timeline({defaults:{ease:'power3.out'},scrollTrigger:{trigger:ovp,start:'top top',end:'+=1900',pin:true,scrub:1,anticipatePin:1,invalidateOnRefresh:true}});
-        tl.to({},{duration:3.4},0);
-        cards.forEach((c,i)=>tl.to(c,{y:0,opacity:1,rotate:0,duration:1.1},.5+i*.55));
-        tl.to({},{duration:.5});
-      }else{
-        gsap.from(cards,{y:50,opacity:0,duration:.9,stagger:.12,ease:'power3.out',scrollTrigger:{trigger:ovp.querySelector('.ovp-stage'),start:'top 75%',once:true}});
-      }
+      const mob=matchMedia('(max-width:860px)').matches;
+      // Same pinned, scrubbed fly-in on desktop AND mobile (shorter scroll distance on phones)
+      gsap.set(cards,{y:()=>innerHeight*1.15,opacity:0,rotate:i=>i%2?7:-7});
+      const tl=gsap.timeline({defaults:{ease:'power3.out'},scrollTrigger:{trigger:ovp,start:'top top',end:mob?'+=1500':'+=1900',pin:true,scrub:1,anticipatePin:1,invalidateOnRefresh:true}});
+      tl.to({},{duration:3.4},0);
+      cards.forEach((c,i)=>tl.to(c,{y:0,opacity:1,rotate:0,duration:1.1},.5+i*.55));
+      tl.to({},{duration:.5});
     }
 
     // About: scrubbed quote, stacked images, process highlight, founder zoom, team stagger
