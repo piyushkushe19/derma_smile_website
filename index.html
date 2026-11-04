@@ -1345,6 +1345,13 @@ a.ph-chip:hover::before{opacity:1}
   .ovp-intro .lead{display:none}
   .ovp-card p{font-size:11.5px}
 }
+
+/* ---------- Inner-page hero headline (About · Treatments · Journal · Contact · treatment pages): same size as Home hero ---------- */
+.ph-hero h1{font-size:clamp(30px,4.4vw + 14px,74px);line-height:1.05;letter-spacing:-.02em;max-width:11ch}
+@media(max-width:860px){.ph-hero h1{font-size:clamp(30px,4.4vw + 14px,74px);max-width:12ch}}
+@media(max-width:480px){.ph-hero h1{font-size:clamp(30px,4.4vw + 14px,74px)}}
+@media(max-width:340px){.ph-hero h1{font-size:clamp(26px,10vw,32px)}}
+@media(min-width:1920px){.ph-hero h1{font-size:clamp(74px,4.2vw,96px)}}
 </style>
 </head>
 <body>
@@ -1369,7 +1376,7 @@ a.ph-chip:hover::before{opacity:1}
       <a href="#/" data-r="/">Home</a>
       <a href="#/about" data-r="/about">About</a>
       <a href="#/treatments" data-r="/treatments">Treatments</a>
-      <a href="#/blog" data-r="/blog">Journal</a>
+      <a href="#/blog" data-r="/blog">Blog</a>
       <a href="#/contact" data-r="/contact">Contact Us</a>
     </nav>
     <a class="btn accent" href="#/contact">Book Now</a>
@@ -1747,7 +1754,7 @@ ${pageHero('About Derma Smile','Dermatology With a Human Touch.','',A.wide,{cta:
 </div></div></section>
 
 <section class="sec"><div class="wrap">
-  ${headCenter('Our Expertise','Expert Care, Your Way.','Specialised care across skin, hair, laser and aesthetics, all in one clinic.')}
+  ${headCenter('Our Team','Expert Care, Your Way.','Specialised care across skin, hair, laser and aesthetics, all in one clinic.')}
   <div class="team-grid">${[['Dermatology','Skin Health & Acne Care',TREAT['skin-treatment'].img2],['Laser Care','Laser Hair Reduction',TREAT['laser-hair-reduction'].img],['Hair & Scalp','PRP, GFC & Scalp Care',TREAT['hair-treatment'].img2],['Aesthetics','Glow & Body Contouring',TREAT.glow.img]].map(x=>`<article class="tm"><div style="position:absolute;inset:0">${img(x[2],x[0])}</div><div class="cap"><b>${x[0]}</b><span>${x[1]}</span><p>Personalised planning, careful assessment and ongoing guidance at every step.</p></div></article>`).join('')}</div>
 </div></section>
 ${ctaBlock()}`;
