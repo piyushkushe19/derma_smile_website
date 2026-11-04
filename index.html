@@ -950,6 +950,41 @@ h1,h2,h3,.display{overflow-wrap:break-word;hyphens:manual}
 .cta-wrap .bg,.ft-bg{position:absolute;inset:0;overflow:hidden;clip-path:inset(0)}
 .cta-wrap .bg img,.ft-bg img{position:fixed;top:0;left:0;width:100vw;height:100vh;height:100lvh;max-width:none;object-fit:cover;object-position:center;transform:none!important}
 
+
+/* ===== Why Derma Smile: stat cards never overlap (stack up to 1100px, calmer parallax above) ===== */
+@media(max-width:1100px){
+  .why-media{width:min(100%,640px)}
+  .why-media .stat-glass{position:relative;left:auto;right:auto;top:auto;bottom:auto;width:100%;margin:0}
+  .why-stats{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;margin-top:14px}
+}
+@media(max-width:600px){.why-stats{grid-template-columns:minmax(0,1fr)}}
+
+/* ===== Floating back-to-top (home page only) ===== */
+.fab-top{position:fixed;right:max(16px,env(safe-area-inset-right));bottom:max(18px,env(safe-area-inset-bottom));z-index:90;
+  width:54px;height:54px;border-radius:50%;display:none;place-items:center;color:#fff;isolation:isolate;overflow:hidden;
+  background:rgba(26,26,26,.82);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);
+  box-shadow:0 14px 34px -10px rgba(0,0,0,.45),inset 0 0 0 1px rgba(255,255,255,.14);
+  opacity:0;visibility:hidden;transform:translateY(18px) scale(.8);
+  transition:opacity .5s var(--ease),transform .6s var(--ease-out),visibility 0s .6s,box-shadow .5s var(--ease);-webkit-tap-highlight-color:transparent}
+html[data-route="/"] .fab-top{display:grid}
+.fab-top.show{opacity:1;visibility:visible;transform:none;transition-delay:0s}
+.fab-top::before{content:"";position:absolute;inset:0;z-index:-1;border-radius:50%;background:var(--accent);transform:translateY(102%);transition:transform .6s var(--ease-out)}
+.fab-top .ring{position:absolute;inset:0;width:100%;height:100%;transform:rotate(-90deg);pointer-events:none}
+.fab-top .ring circle{fill:none;stroke-width:2.5}
+.fab-top .ring .tr{stroke:rgba(255,255,255,.14)}
+.fab-top .ring .pg{stroke:var(--accent);stroke-linecap:round;stroke-dasharray:138.23;stroke-dashoffset:138.23}
+.fab-top .ar{width:18px;height:18px;display:block;transform:rotate(-90deg)}
+.fab-top:active{scale:.92}
+.fab-top:focus-visible{outline:2px solid var(--accent);outline-offset:3px}
+@media(hover:hover){
+  .fab-top.show:hover{transform:translateY(-5px);box-shadow:0 18px 38px -10px rgba(200,121,44,.7),inset 0 0 0 1px rgba(255,255,255,.2)}
+  .fab-top:hover::before{transform:none}
+  .fab-top:hover .ar{animation:upLoop .85s var(--ease-out)}
+  .fab-top:hover .ring .pg{stroke:#fff}
+}
+@media(max-width:480px){.fab-top{width:48px;height:48px}.fab-top .ar{width:16px;height:16px}}
+@media(prefers-reduced-motion:reduce){.fab-top,.fab-top::before{transition-duration:.01ms!important}.fab-top .ar{animation:none!important}}
+
 /* fluid headings so nothing jumps between breakpoints */
 h1{font-size:clamp(30px,4.4vw + 14px,74px)}
 h2{font-size:clamp(26px,3.6vw + 12px,64px)}
@@ -1325,6 +1360,10 @@ a.ph-chip:hover::before{opacity:1}
 </header>
 <div class="drawer" id="dr" aria-hidden="true"></div>
 <main id="app"></main>
+<button class="fab-top" id="fabTop" type="button" aria-label="Back to top">
+  <svg class="ring" viewBox="0 0 54 54" aria-hidden="true"><circle class="tr" cx="27" cy="27" r="22"/><circle class="pg" cx="27" cy="27" r="22"/></svg>
+  <svg class="ar" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+</button>
 <footer class="site-footer"><div class="ft-bg" id="ftbg"></div><div class="wrap" id="ft"></div></footer>
 
 <script src="https://cdn.jsdelivr.net/npm/lenis@1.1.18/dist/lenis.min.js"></script>
@@ -1922,13 +1961,13 @@ function animate(root){
     // Why Derma Smile: arch-to-rect image reveal, glass stats fly in + float, count-up, staged copy
     const wp=root.querySelector('.why-media .ph');
     if(wp){
-      const wim=wp.querySelector('img'), desk=matchMedia('(min-width:861px)').matches;
+      const wim=wp.querySelector('img'), desk=matchMedia('(min-width:1101px)').matches;
       gsap.fromTo(wp,{clipPath:'inset(18% 14% 18% 14% round 200px)'},{clipPath:'inset(0% 0% 0% 0% round 18px)',ease:'none',scrollTrigger:{trigger:wp,start:'top 92%',end:'top 35%',scrub:true}});
       gsap.fromTo(wim,{scale:1.4},{scale:1,ease:'none',scrollTrigger:{trigger:wp,start:'top bottom',end:'bottom top',scrub:true}});
       root.querySelectorAll('.stat-glass').forEach((c,i)=>{
         const d=i?1:-1;
         gsap.fromTo(c,desk?{x:150*d,rotate:9*d,opacity:0,scale:.88}:{y:50,opacity:0},desk?{x:0,rotate:0,scale:1,opacity:1,duration:1.4,delay:.15*i,ease:'power4.out',scrollTrigger:{trigger:'.why-media',start:'top 65%',once:true}}:{y:0,opacity:1,duration:1,ease:'power3.out',scrollTrigger:{trigger:c,start:'top 90%',once:true}});
-        if(desk)gsap.to(c,{y:d*-55,ease:'none',scrollTrigger:{trigger:'.why-media',start:'top bottom',end:'bottom top',scrub:true}});
+        if(desk)gsap.to(c,{y:d*-26,ease:'none',scrollTrigger:{trigger:'.why-media',start:'top bottom',end:'bottom top',scrub:true}});
         const n=c.querySelector('strong'), m=n&&n.textContent.match(/(\d+)(.*)/);
         if(m){const o={v:0};n.textContent='0'+m[2];ScrollTrigger.create({trigger:'.why-media',start:'top 65%',once:true,onEnter:()=>gsap.to(o,{v:+m[1],duration:2.2,delay:.3,ease:'power2.out',onUpdate:()=>n.textContent=Math.round(o.v)+m[2]})})}
       });
@@ -2178,6 +2217,21 @@ if(matchMedia('(hover:hover) and (pointer:fine)').matches&&!RM){
   });
   document.addEventListener('pointerout',e=>{const b=e.target.closest&&e.target.closest('.btn:not(.accent)'); if(b&&window.gsap&&!b.contains(e.relatedTarget))gsap.to(b,{x:0,y:0,duration:.7,ease:'elastic.out(1,.5)',overwrite:'auto'})});
 }
+// Floating back-to-top (home page only): appears after scrolling, shows scroll progress, hides over the footer
+(function(){
+  const fab=document.getElementById('fabTop'); if(!fab)return;
+  const pg=fab.querySelector('.pg'), C=138.23, ft=document.querySelector('.site-footer');
+  const upd=()=>{
+    const home=document.documentElement.dataset.route==='/';
+    const y=scrollY||0, max=Math.max(1,document.documentElement.scrollHeight-innerHeight);
+    pg.style.strokeDashoffset=(C*(1-Math.min(1,y/max))).toFixed(1);
+    const overFooter=ft&&ft.getBoundingClientRect().top<innerHeight-60;
+    fab.classList.toggle('show',home&&y>Math.min(500,innerHeight*.6)&&!overFooter);
+  };
+  addEventListener('scroll',upd,{passive:true}); addEventListener('resize',upd);
+  window.__fabUpdate=upd;
+  fab.addEventListener('click',()=>{lenis?lenis.scrollTo(0,{duration:1.5}):scrollTo({top:0,behavior:'smooth'})});
+})();
 // Hide header on scroll down
 addEventListener('scroll',()=>{
   const y=scrollY||0; const hd=document.getElementById('hd');
@@ -2205,9 +2259,11 @@ function runLoader(page,first,onCovered){
     .to('#ldr',{attr:{y:0},duration:F,ease:'power1.inOut'},S)
     .to('.ld-bar i',{scaleX:1,duration:F,ease:'power1.inOut'},S)
     .to(o,{n:100,duration:F,ease:'power1.inOut',onUpdate:()=>{num.textContent=Math.round(o.n)}},S)
-    .add(onCovered,S+F+(first?.25:.05))
     .to('.ld-in>*',{opacity:0,y:-18,duration:.35,stagger:.04,ease:'power2.in'},S+F+(first?.35:.1))
-    .to(L,{clipPath:'circle(0% at 50% 50%)',duration:.85,ease:'power3.inOut'},'>-.1')
+    /* swap the page only once the loader content has faded, then open the loader a beat later,
+       so the new page's entrance animations play while it is being revealed (not hidden behind it) */
+    .add(onCovered,'>-.05')
+    .to(L,{clipPath:'circle(0% at 50% 50%)',duration:1.05,ease:'power3.inOut'},'>.12')
     .set(L,{visibility:'hidden',pointerEvents:'none'});
 }
 if(!window.gsap||RM){document.getElementById('loader').style.display='none'}
@@ -2219,6 +2275,8 @@ function route(){
   let r=(location.hash.replace(/^#/,'')||'/').split('?')[0];
   if(r.length>1)r=r.replace(/\/$/,'');
   const page=P[r]?r:'404';
+  document.documentElement.dataset.route=page;
+  if(window.__fabUpdate)window.__fabUpdate();
   killAnims();
   setMenu(false);
   const swap=()=>{
@@ -2240,7 +2298,8 @@ function route(){
       ScrollTrigger.refresh();
       app.querySelectorAll('img').forEach(i=>i.addEventListener('load',()=>ScrollTrigger.refresh(),{once:true}));
     }
-    if(window.gsap&&!RM) gsap.fromTo(app,{opacity:0},{opacity:1,duration:.45});
+    if(window.__fabUpdate)setTimeout(window.__fabUpdate,200);
+    if(window.gsap&&!RM) gsap.fromTo(app,{opacity:0},{opacity:1,duration:.9,ease:'power2.out',clearProps:'opacity'});
   };
   if(window.gsap&&!RM) runLoader(page,!app.innerHTML,swap);
   else swap();
