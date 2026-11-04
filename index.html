@@ -882,6 +882,81 @@ h1,h2,h3,.display{overflow-wrap:break-word;hyphens:manual}
   .tm{aspect-ratio:4/4.6}
   .hw-item h3{font-size:clamp(22px,6.4vw,28px)}
 }
+
+/* ========================================================================
+   FLUID FIT PASS — every width from 280px to 4K, no overflow, no cut-offs
+   ======================================================================== */
+/* grid/flex children may shrink instead of blowing the layout out */
+.split>*,.hero-inner>*,.cta-box>*,.faq-grid>*,.cgrid>*,.t-card>*,.hw>*,.fgrid>*,.ab-phil>*,
+.cards-grid>*,.blog-grid>*,.steps>*,.areas>*,.res-grid>*,.bagrid>*,.team-grid>*,.ct-info>*,.ct-form>*,.ct-form .f2>*{min-width:0}
+.hero-copy,.t-inner,.fc,.center-intro{max-width:100%}
+.btn{max-width:100%}
+.ct-info span,.ct-info a,.info-card,.info-card *,.fgrid li,.fgrid p,.copy,.post h3,.post p{overflow-wrap:anywhere}
+.u{max-width:100%}
+
+/* tablets: 601–860 get real multi-column grids instead of one giant column */
+@media(min-width:601px) and (max-width:860px){
+  .cards-grid,.blog-grid,.res-grid,.bagrid{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .flip{height:clamp(400px,58vw,460px)}
+  .ovp-stage{width:min(100% - var(--pad)*2,720px);grid-template-columns:repeat(2,minmax(0,1fr))}
+  .ovp-intro{grid-column:1/-1}
+  .float-stack{width:min(100%,720px);grid-template-columns:repeat(2,minmax(0,1fr))}
+  .why-media{width:min(100%,560px)}
+  .why-stats{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .cta-box{grid-template-columns:minmax(0,1fr)}
+  .team-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .areas{grid-template-columns:repeat(3,minmax(0,1fr))}
+  .ct-info{grid-template-columns:repeat(2,minmax(0,1fr))}
+}
+/* phones: single, shrink-safe columns */
+@media(max-width:600px){
+  .split,.faq-grid,.cta-box,.cgrid,.t-card,.hw,.hero-inner,.ab-phil{grid-template-columns:minmax(0,1fr)}
+  .cards-grid,.blog-grid,.res-grid,.bagrid{grid-template-columns:minmax(0,1fr)}
+  .areas{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .steps{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .steps .t{padding:14px}.steps h4{font-size:16px}.steps p{font-size:13px}
+  .ovp-stage{width:min(100% - var(--pad)*2,520px)}
+}
+@media(max-width:380px){
+  .steps{grid-template-columns:minmax(0,1fr)}
+  .areas{grid-template-columns:minmax(0,1fr)}
+}
+@media(max-width:520px){.fgrid,.team-grid,.ct-info{grid-template-columns:minmax(0,1fr)}}
+@media(max-width:600px) and (min-width:481px){.fgrid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+
+/* buttons can wrap on very narrow screens instead of overflowing */
+@media(max-width:480px){
+  .btn:not(.accent):not(.sm){white-space:normal;height:auto;min-height:44px;padding-top:3px;padding-bottom:3px;line-height:1.25}
+  .btn:not(.accent):not(.sm) .arr{width:38px;height:38px}
+  .flip-back{overflow:auto;padding:20px}
+  .flip-back li{padding:9px 0;font-size:13.5px}
+  .flip-back h4{margin-bottom:8px}
+  .flip-face .desc{font-size:13px}
+  .ct-info span{font-size:14px}
+  .t-card .quote p{font-size:15.5px}
+}
+@media(max-width:340px){
+  .hero-copy h1,.page-hero h1,.ab-hero h1{font-size:clamp(26px,10vw,32px)}
+  .badge{font-size:11px;padding:0 10px 0 6px}
+  .ld-logo img{height:44px;max-width:200px}
+  .stat-glass strong{font-size:32px}
+  .stat-glass{padding:18px 16px}
+}
+
+/* fluid headings so nothing jumps between breakpoints */
+h1{font-size:clamp(30px,4.4vw + 14px,74px)}
+h2{font-size:clamp(26px,3.6vw + 12px,64px)}
+@media(min-width:1920px){h1{font-size:clamp(74px,4.2vw,96px)}h2{font-size:clamp(64px,3.4vw,84px)}}
+
+/* ---------- “Ready to Begin?” section ---------- */
+.cta-wrap{padding:clamp(28px,6vw,80px) 0}
+.cta-box{padding:clamp(16px,3vw,40px);gap:clamp(18px,3vw,36px)}
+.cta-box h2{font-size:clamp(28px,3.4vw + 10px,56px);max-width:12ch}
+.cta-box .ph{width:100%;min-height:0;background:rgba(255,255,255,.25)}
+.cta-box .ph img{object-position:center}
+@media(min-width:861px){.cta-box .ph{aspect-ratio:5/4}}
+@media(max-width:860px){.cta-box .ph{aspect-ratio:16/10;order:-1}.cta-box h2{max-width:none}}
+@media(max-width:480px){.cta-box .ph{aspect-ratio:4/3;border-radius:16px}.cta-box{border-radius:22px}}
 </style>
 </head>
 <body>
@@ -1054,13 +1129,15 @@ const stepsHTML=()=>{
   return `<div class="steps">${s.map((x,i)=>`<div class="step reveal-y" data-r><div class="ph" data-img>${img(A.steps[i],x[1])}</div><div class="t"><h4 data-n="${x[0]}">${x[1]}</h4><p>${x[2]}</p></div></div>`).join('')}</div>`;
 };
 const ba=(l,b,a)=>`<div class="reveal-y" data-r><div class="ba"><div class="bf">${img(b,l+' before')}</div><div class="af">${img(a,l+' after')}</div><span class="lb" style="left:12px">Before</span><span class="lb" style="right:12px">After</span><div class="hd"></div><input type="range" min="0" max="100" value="50" aria-label="${l} comparison"></div><h3>${l}</h3></div>`;
+/* Image for the “Ready to Begin?” section — swap this URL to change it */
+const CTA_IMG=TREAT.glow.img2;
 const ctaBlock=()=>`<section class="cta-wrap"><div class="bg">${img(SKY2,'Sky')}</div>
   <div class="cta-box reveal-y" data-r>
     <div>${badge('Your Skin, Our Care','light')}<h2 data-w>Ready to Begin?</h2>
       <p class="lead">Start with a personalised consultation to better understand your skin, hair or body goals and find the right treatment.</p>
       <div class="mt">${btn('Book An Appointment','#/contact')}</div>
     </div>
-    <div class="ph" data-img>${img(A.cta,'Consultation')}</div>
+    <div class="ph" data-img>${img(CTA_IMG,'Consultation')}</div>
   </div></section>`;
 const pageHero=(tag,h,p,media)=>`<section class="ab-hero"><div class="wrap">${badge(tag)}<h1 data-w>${h}</h1>${p?`<p class="lead" style="margin:16px auto 0">${p}</p>`:''}</div>${media?`<div class="ab-media" data-img>${img(media,h)}</div>`:'<div style="height:24px"></div>'}</section>`;
 const moreTreat=ex=>`<section class="sec sec-fog"><div class="wrap">${headCenter('More Treatments','Care for Every Skin.')}<div class="cards-grid">${TK.filter(k=>k!==ex).slice(0,3).map(flipCard).join('')}</div></div></section>`;
